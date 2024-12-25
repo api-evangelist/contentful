@@ -26,7 +26,6 @@ apis:
       - type: Documentation
         url: >-
           https://www.contentful.com/developers/docs/references/content-delivery-api/
-    overlays: []
     aid: contenful:contentful-content-delivery-api
   - name: Contentful Content Management API
     description: >-
@@ -42,7 +41,6 @@ apis:
       - type: Documentation
         url: >-
           https://www.contentful.com/developers/docs/references/content-management-api/
-    overlays: []
     aid: contenful:contentful-content-management-api
   - name: Contentful Preview API
     description: >-
@@ -59,7 +57,6 @@ apis:
       - type: Documentation
         url: >-
           https://www.contentful.com/developers/docs/references/content-preview-api/
-    overlays: []
     aid: contenful:contentful-preview-api
   - name: Contentful Images API
     description: >-
@@ -72,7 +69,6 @@ apis:
     properties:
       - type: Documentation
         url: https://www.contentful.com/developers/docs/references/images-api/
-    overlays: []
     aid: contenful:contentful-images-api
   - name: Contentful GraphQL Content API
     description: >-
@@ -87,7 +83,6 @@ apis:
     properties:
       - type: Documentation
         url: https://www.contentful.com/developers/docs/references/graphql/
-    overlays: []
     aid: contenful:contentful-graphql-content-api
   - name: Contentful User Management API
     description: >-
@@ -102,7 +97,6 @@ apis:
       - type: Documentation
         url: >-
           https://www.contentful.com/developers/docs/references/user-management-api/
-    overlays: []
     aid: contenful:contentful-user-management-api
   - name: Contentful SCIM API
     description: >-
@@ -116,7 +110,6 @@ apis:
     properties:
       - type: Documentation
         url: https://www.contentful.com/developers/docs/references/scim-api/
-    overlays: []
     aid: contenful:contentful-scim-api
 common:
   - type: Portal
