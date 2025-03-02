@@ -1,10 +1,13 @@
-# contentful (contentful)
+# Contentful (contentful)
 Contentful is a content management platform that allows businesses to create, manage, and deliver digital content across various channels and devices. By using Contentful, companies can streamline their content creation process, collaborate with team members, and ensure a consistent and cohesive brand message. With its flexible and scalable infrastructure, Contentful enables organizations to easily organize and update their content, making it easier to stay relevant and engaging with their audience. Overall, Contentful helps businesses optimize their content strategy and deliver personalized and seamless experiences to their customers.
 
 **URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/apis-json/artisanal/main/apis/contentful.yml)
 
 ## Scope
 
+- **Type:** Index 
+- **Position:** Consuming 
+- **Access:** 3rd-Party 
 
 ## Tags:
 
