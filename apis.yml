@@ -155,7 +155,7 @@ common:
   - url: https://www.contentful.com/legal/privacy-at-contentful/privacy-notice/
     type: Privacy Policy
 created: 2023/11/20
-modified: '2025-03-02'
+modified: '2026-03-16'
 description: >-
   Contentful is a content management platform that allows businesses to create,
   manage, and deliver digital content across various channels and devices. By
@@ -167,9 +167,8 @@ description: >-
   businesses optimize their content strategy and deliver personalized and
   seamless experiences to their customers.
 maintainers:
-  - FN: API Evangelist
-    url: http://apievangelist.com
-    email: info@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com
 specificationVersion: '0.16'
 type: Index
 position: Consuming
