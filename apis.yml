@@ -154,8 +154,14 @@ common:
     type: Security
   - url: https://www.contentful.com/legal/privacy-at-contentful/privacy-notice/
     type: Privacy Policy
+  - url: https://www.contentful.com/
+    type: Website
+  - url: https://github.com/contentful
+    type: GitHubOrganization
+  - url: https://www.contentful.com/developers/docs/references/authentication/
+    type: Authentication
 created: 2023/11/20
-modified: '2026-03-16'
+modified: '2026-04-01'
 description: >-
   Contentful is a content management platform that allows businesses to create,
   manage, and deliver digital content across various channels and devices. By
