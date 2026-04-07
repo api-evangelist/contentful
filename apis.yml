@@ -1,14 +1,12 @@
 aid: contentful
-url: 
-  https://raw.githubusercontent.com/apis-json/artisanal/main/apis/contentful.yml
+url: https://raw.githubusercontent.com/apis-json/artisanal/main/apis/contentful.yml
 apis:
   - aid: contentful:contentful-content-delivery-api
     name: Contentful Content Delivery API
     tags:
-      - Content
       - CMS
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+      - Content
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://cdn.contentful.com
     humanURL: >-
       https://www.contentful.com/developers/docs/references/content-delivery-api/
@@ -24,10 +22,9 @@ apis:
   - aid: contentful:contentful-content-management-api
     name: Contentful Content Management API
     tags:
-      - Content
       - CMS
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+      - Content
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.example.com
     humanURL: >-
       https://www.contentful.com/developers/docs/references/content-management-api/
@@ -42,14 +39,12 @@ apis:
   - aid: contentful:contentful-preview-api
     name: Contentful Preview API
     tags:
-      - Content
       - CMS
+      - Content
       - Preview
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.example.com
-    humanURL: 
-      https://www.contentful.com/developers/docs/references/content-preview-api/
+    humanURL: https://www.contentful.com/developers/docs/references/content-preview-api/
     properties:
       - url: >-
           https://www.contentful.com/developers/docs/references/content-preview-api/
@@ -63,11 +58,10 @@ apis:
   - aid: contentful:contentful-images-api
     name: Contentful Images API
     tags:
-      - Content
       - CMS
+      - Content
       - Images
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.example.com
     humanURL: https://www.contentful.com/developers/docs/references/images-api/
     properties:
@@ -79,11 +73,10 @@ apis:
   - aid: contentful:contentful-graphql-content-api
     name: Contentful GraphQL Content API
     tags:
-      - Content
       - CMS
+      - Content
       - GraphQL
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.example.com
     humanURL: https://www.contentful.com/developers/docs/references/graphql/
     properties:
@@ -97,14 +90,12 @@ apis:
   - aid: contentful:contentful-user-management-api
     name: Contentful User Management API
     tags:
-      - Content
       - CMS
+      - Content
       - Users
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.example.com
-    humanURL: 
-      https://www.contentful.com/developers/docs/references/user-management-api/
+    humanURL: https://www.contentful.com/developers/docs/references/user-management-api/
     properties:
       - url: >-
           https://www.contentful.com/developers/docs/references/user-management-api/
@@ -116,11 +107,10 @@ apis:
   - aid: contentful:contentful-scim-api
     name: Contentful SCIM API
     tags:
-      - Content
       - CMS
+      - Content
       - SCIM
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.example.com
     humanURL: https://www.contentful.com/developers/docs/references/scim-api/
     properties:
@@ -132,10 +122,9 @@ apis:
       people in cloud-based applications and services.
 name: Contentful
 tags:
-  - Content
   - CMS
-image: 
-  https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  - Content
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 common:
   - url: https://www.contentful.com/developers/
     type: Portal
