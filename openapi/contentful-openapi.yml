@@ -1,0 +1,216 @@
+openapi: 3.1.0
+info:
+  title: Contentful Content Delivery API
+  version: '1.0'
+  description: >-
+    Read-only REST API for delivering published content from Contentful
+    spaces to apps, websites, and other media. Returns entries, assets,
+    content types, locales, tags, and supports incremental sync.
+  x-generated-from: https://www.contentful.com/developers/docs/references/content-delivery-api/
+  x-generated-by: claude-crawl-2026-05-08
+servers:
+  - url: https://cdn.contentful.com
+    description: Content Delivery API
+security:
+  - BearerAuth: []
+paths:
+  /spaces/{space_id}:
+    get:
+      summary: Get space
+      operationId: getSpace
+      parameters:
+        - $ref: '#/components/parameters/SpaceId'
+      responses:
+        '200':
+          description: Space resource
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+  /spaces/{space_id}/environments/{environment_id}/content_types:
+    get:
+      summary: Get content types
+      operationId: getContentTypes
+      parameters:
+        - $ref: '#/components/parameters/SpaceId'
+        - $ref: '#/components/parameters/EnvironmentId'
+      responses:
+        '200':
+          description: Collection of content types
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+  /spaces/{space_id}/environments/{environment_id}/content_types/{content_type_id}:
+    get:
+      summary: Get content type
+      operationId: getContentType
+      parameters:
+        - $ref: '#/components/parameters/SpaceId'
+        - $ref: '#/components/parameters/EnvironmentId'
+        - name: content_type_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Content type resource
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+  /spaces/{space_id}/environments/{environment_id}/entries:
+    get:
+      summary: Get entries
+      operationId: getEntries
+      parameters:
+        - $ref: '#/components/parameters/SpaceId'
+        - $ref: '#/components/parameters/EnvironmentId'
+      responses:
+        '200':
+          description: Collection of entries
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+  /spaces/{space_id}/environments/{environment_id}/entries/{entry_id}:
+    get:
+      summary: Get entry
+      operationId: getEntry
+      parameters:
+        - $ref: '#/components/parameters/SpaceId'
+        - $ref: '#/components/parameters/EnvironmentId'
+        - name: entry_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Entry resource
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+  /spaces/{space_id}/environments/{environment_id}/assets:
+    get:
+      summary: Get assets
+      operationId: getAssets
+      parameters:
+        - $ref: '#/components/parameters/SpaceId'
+        - $ref: '#/components/parameters/EnvironmentId'
+      responses:
+        '200':
+          description: Collection of assets
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+  /spaces/{space_id}/environments/{environment_id}/assets/{asset_id}:
+    get:
+      summary: Get asset
+      operationId: getAsset
+      parameters:
+        - $ref: '#/components/parameters/SpaceId'
+        - $ref: '#/components/parameters/EnvironmentId'
+        - name: asset_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Asset resource
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+  /spaces/{space_id}/environments/{environment_id}/locales:
+    get:
+      summary: Get locales
+      operationId: getLocales
+      parameters:
+        - $ref: '#/components/parameters/SpaceId'
+        - $ref: '#/components/parameters/EnvironmentId'
+      responses:
+        '200':
+          description: Collection of locales
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+  /spaces/{space_id}/environments/{environment_id}/tags:
+    get:
+      summary: Get tags
+      operationId: getTags
+      parameters:
+        - $ref: '#/components/parameters/SpaceId'
+        - $ref: '#/components/parameters/EnvironmentId'
+      responses:
+        '200':
+          description: Collection of tags
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+  /spaces/{space_id}/environments/{environment_id}/sync:
+    get:
+      summary: Sync content
+      operationId: sync
+      parameters:
+        - $ref: '#/components/parameters/SpaceId'
+        - $ref: '#/components/parameters/EnvironmentId'
+        - name: initial
+          in: query
+          schema:
+            type: boolean
+        - name: sync_token
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Sync result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+  parameters:
+    SpaceId:
+      name: space_id
+      in: path
+      required: true
+      schema:
+        type: string
+    EnvironmentId:
+      name: environment_id
+      in: path
+      required: true
+      schema:
+        type: string
+  schemas:
+    Resource:
+      type: object
+      additionalProperties: true
+    Collection:
+      type: object
+      properties:
+        sys:
+          type: object
+          additionalProperties: true
+        total:
+          type: integer
+        skip:
+          type: integer
+        limit:
+          type: integer
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Resource'

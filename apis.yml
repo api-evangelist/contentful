@@ -14,6 +14,8 @@ apis:
       - url: >-
           https://www.contentful.com/developers/docs/references/content-delivery-api/
         type: Documentation
+      - url: openapi/contentful-openapi.yml
+        type: OpenAPI
     description: >-
       The Content Delivery API (CDA), available at cdn.contentful.com, is a
       read-only API for delivering content from Contentful to apps, websites and
