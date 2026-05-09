@@ -3,11 +3,12 @@
   "feeds": [
     {
       "source": "https://www.contentful.com/blog/category/guides/",
-      "feed_url": "https://www.contentful.com/blog/feed.xml",
-      "saved": 10,
-      "title": "Contentful Blog Post"
+      "feed_url": "",
+      "title": "",
+      "saved": 0,
+      "error": "no_feed"
     }
   ],
   "post_count": 10,
-  "fetched": "2026-05-03T23:27:07Z"
+  "fetched": "2026-05-09T20:17:51Z"
 }
