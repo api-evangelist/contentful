@@ -162,6 +162,8 @@ common:
     type: GitHubOrganization
   - url: https://www.contentful.com/developers/docs/references/authentication/
     type: Authentication
+  - type: Integrations
+    url: https://www.contentful.com/marketplace/
 created: 2023/11/20
 modified: '2026-04-01'
 description: >-
@@ -169,6 +171,10 @@ description: >-
   and deliver digital content across various channels and devices. By using Contentful,
   companies can streamline their content creation process, collaborate with team members,
   and ensure a consistent and cohesive brand message.
+integrations:
+  - name: Braze Logo
+  - name: Essentials Bynder
+  - name: Essentials Dropbox
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
