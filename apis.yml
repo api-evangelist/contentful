@@ -133,29 +133,29 @@ common:
   - url: https://www.contentful.com/developers/docs/
     type: Documentation
   - url: https://www.contentful.com/developers/changelog/
-    type: Change Log
+    type: ChangeLog
   - url: https://www.contentful.com/blog/category/guides/
     type: Blog
   - url: https://www.contentful.com/pricing/
     type: Plans
   - url: https://www.contentful.com/sign-up/#small
-    type: Sign Up
+    type: SignUp
   - url: https://be.contentful.com/login
     type: Login
   - url: https://www.contentful.com/faq/webhooks/
     type: Webhooks
   - url: https://www.contentful.com/developers/changelog/
-    type: Change Log
+    type: ChangeLog
   - url: https://www.contentful.com/developers/code-of-conduct/
     type: Code of Conduct
   - url: https://www.contentful.com/support/
     type: Support
   - url: http://stackoverflow.com/questions/tagged/contentful?sort=newest
-    type: Stack Overflow
+    type: StackOverflow
   - url: https://www.contentful.com/security/
     type: Security
   - url: https://www.contentful.com/legal/privacy-at-contentful/privacy-notice/
-    type: Privacy Policy
+    type: PrivacyPolicy
   - url: https://www.contentful.com/
     type: Website
   - url: https://github.com/contentful
