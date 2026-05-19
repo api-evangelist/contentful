@@ -164,8 +164,14 @@ common:
     type: Authentication
   - type: Integrations
     url: https://www.contentful.com/marketplace/
+  - name: MCP Server
+    url: https://github.com/contentful/contentful-mcp-server
+    type: MCPServer
+  - name: Agent Skills
+    url: https://github.com/contentful/skill-kit
+    type: AgentSkill
 created: 2023/11/20
-modified: '2026-04-01'
+modified: '2026-05-19'
 description: >-
   Contentful is a content management platform that allows businesses to create, manage,
   and deliver digital content across various channels and devices. By using Contentful,
