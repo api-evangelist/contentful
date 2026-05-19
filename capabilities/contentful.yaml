@@ -1,0 +1,398 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Contentful Content Delivery API
+  description: 'Contentful Content Delivery API. 10 operations. Lead operation: Get space. Self-contained Naftiko capability
+    covering one Contentful business surface.'
+  tags:
+  - Contentful
+  - Contentful Content Delivery API
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    CONTENTFUL_API_KEY: CONTENTFUL_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: contentful
+    baseUri: https://cdn.contentful.com
+    description: Contentful Content Delivery API business capability. Self-contained, no shared references.
+    resources:
+    - name: spaces-space_id
+      path: /spaces/{space_id}
+      operations:
+      - name: getspace
+        method: GET
+        description: Get space
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: spaces-space_id-environments-environment_id-assets
+      path: /spaces/{space_id}/environments/{environment_id}/assets
+      operations:
+      - name: getassets
+        method: GET
+        description: Get assets
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: spaces-space_id-environments-environment_id-assets-asset_id
+      path: /spaces/{space_id}/environments/{environment_id}/assets/{asset_id}
+      operations:
+      - name: getasset
+        method: GET
+        description: Get asset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: asset_id
+          in: path
+          type: string
+          required: true
+    - name: spaces-space_id-environments-environment_id-content_types
+      path: /spaces/{space_id}/environments/{environment_id}/content_types
+      operations:
+      - name: getcontenttypes
+        method: GET
+        description: Get content types
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: spaces-space_id-environments-environment_id-content_types-content_type_id
+      path: /spaces/{space_id}/environments/{environment_id}/content_types/{content_type_id}
+      operations:
+      - name: getcontenttype
+        method: GET
+        description: Get content type
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: content_type_id
+          in: path
+          type: string
+          required: true
+    - name: spaces-space_id-environments-environment_id-entries
+      path: /spaces/{space_id}/environments/{environment_id}/entries
+      operations:
+      - name: getentries
+        method: GET
+        description: Get entries
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: spaces-space_id-environments-environment_id-entries-entry_id
+      path: /spaces/{space_id}/environments/{environment_id}/entries/{entry_id}
+      operations:
+      - name: getentry
+        method: GET
+        description: Get entry
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: entry_id
+          in: path
+          type: string
+          required: true
+    - name: spaces-space_id-environments-environment_id-locales
+      path: /spaces/{space_id}/environments/{environment_id}/locales
+      operations:
+      - name: getlocales
+        method: GET
+        description: Get locales
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: spaces-space_id-environments-environment_id-sync
+      path: /spaces/{space_id}/environments/{environment_id}/sync
+      operations:
+      - name: sync
+        method: GET
+        description: Sync content
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: initial
+          in: query
+          type: boolean
+        - name: sync_token
+          in: query
+          type: string
+    - name: spaces-space_id-environments-environment_id-tags
+      path: /spaces/{space_id}/environments/{environment_id}/tags
+      operations:
+      - name: gettags
+        method: GET
+        description: Get tags
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.CONTENTFUL_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: contentful-rest
+    port: 8080
+    description: REST adapter for Contentful Content Delivery API. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/spaces/{space-id}
+      name: spaces-space-id
+      description: REST surface for spaces-space_id.
+      operations:
+      - method: GET
+        name: getspace
+        description: Get space
+        call: contentful.getspace
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/spaces/{space-id}/environments/{environment-id}/assets
+      name: spaces-space-id-environments-environment-id-assets
+      description: REST surface for spaces-space_id-environments-environment_id-assets.
+      operations:
+      - method: GET
+        name: getassets
+        description: Get assets
+        call: contentful.getassets
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/spaces/{space-id}/environments/{environment-id}/assets/{asset-id}
+      name: spaces-space-id-environments-environment-id-assets-asset-id
+      description: REST surface for spaces-space_id-environments-environment_id-assets-asset_id.
+      operations:
+      - method: GET
+        name: getasset
+        description: Get asset
+        call: contentful.getasset
+        with:
+          asset_id: rest.asset_id
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/spaces/{space-id}/environments/{environment-id}/content-types
+      name: spaces-space-id-environments-environment-id-content-types
+      description: REST surface for spaces-space_id-environments-environment_id-content_types.
+      operations:
+      - method: GET
+        name: getcontenttypes
+        description: Get content types
+        call: contentful.getcontenttypes
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/spaces/{space-id}/environments/{environment-id}/content-types/{content-type-id}
+      name: spaces-space-id-environments-environment-id-content-types-content-type-id
+      description: REST surface for spaces-space_id-environments-environment_id-content_types-content_type_id.
+      operations:
+      - method: GET
+        name: getcontenttype
+        description: Get content type
+        call: contentful.getcontenttype
+        with:
+          content_type_id: rest.content_type_id
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/spaces/{space-id}/environments/{environment-id}/entries
+      name: spaces-space-id-environments-environment-id-entries
+      description: REST surface for spaces-space_id-environments-environment_id-entries.
+      operations:
+      - method: GET
+        name: getentries
+        description: Get entries
+        call: contentful.getentries
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/spaces/{space-id}/environments/{environment-id}/entries/{entry-id}
+      name: spaces-space-id-environments-environment-id-entries-entry-id
+      description: REST surface for spaces-space_id-environments-environment_id-entries-entry_id.
+      operations:
+      - method: GET
+        name: getentry
+        description: Get entry
+        call: contentful.getentry
+        with:
+          entry_id: rest.entry_id
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/spaces/{space-id}/environments/{environment-id}/locales
+      name: spaces-space-id-environments-environment-id-locales
+      description: REST surface for spaces-space_id-environments-environment_id-locales.
+      operations:
+      - method: GET
+        name: getlocales
+        description: Get locales
+        call: contentful.getlocales
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/spaces/{space-id}/environments/{environment-id}/sync
+      name: spaces-space-id-environments-environment-id-sync
+      description: REST surface for spaces-space_id-environments-environment_id-sync.
+      operations:
+      - method: GET
+        name: sync
+        description: Sync content
+        call: contentful.sync
+        with:
+          initial: rest.initial
+          sync_token: rest.sync_token
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/spaces/{space-id}/environments/{environment-id}/tags
+      name: spaces-space-id-environments-environment-id-tags
+      description: REST surface for spaces-space_id-environments-environment_id-tags.
+      operations:
+      - method: GET
+        name: gettags
+        description: Get tags
+        call: contentful.gettags
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: contentful-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Contentful Content Delivery API. One tool per consumed operation, routed inline through this
+      capability's consumes block.
+    tools:
+    - name: get-space
+      description: Get space
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: contentful.getspace
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-assets
+      description: Get assets
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: contentful.getassets
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-asset
+      description: Get asset
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: contentful.getasset
+      with:
+        asset_id: tools.asset_id
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-content-types
+      description: Get content types
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: contentful.getcontenttypes
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-content-type
+      description: Get content type
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: contentful.getcontenttype
+      with:
+        content_type_id: tools.content_type_id
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-entries
+      description: Get entries
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: contentful.getentries
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-entry
+      description: Get entry
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: contentful.getentry
+      with:
+        entry_id: tools.entry_id
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-locales
+      description: Get locales
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: contentful.getlocales
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: sync-content
+      description: Sync content
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: contentful.sync
+      with:
+        initial: tools.initial
+        sync_token: tools.sync_token
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-tags
+      description: Get tags
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: contentful.gettags
+      outputParameters:
+      - type: object
+        mapping: $.
