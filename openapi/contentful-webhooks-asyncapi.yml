@@ -1,0 +1,735 @@
+asyncapi: 2.6.0
+info:
+  title: Contentful Webhooks
+  version: '1.0'
+  description: >-
+    AsyncAPI 2.6 description of Contentful's outbound webhook surface.
+    Contentful delivers HTTP callbacks to subscriber URLs when content
+    events (Content Type, Entry, Asset, Task, Comment, Release, Workflow,
+    Template Installation) and action events (Release Actions, Bulk
+    Actions, Scheduled Actions) occur in a space. Each request is a POST
+    with content type application/vnd.contentful.management.v1+json. When
+    a 64-character webhook signing secret is configured for the space,
+    Contentful signs every request with HMAC-SHA256 and adds the
+    x-contentful-signature, x-contentful-signed-headers, and
+    x-contentful-timestamp headers so subscribers can verify
+    authenticity.
+  contact:
+    name: Contentful Developer Portal
+    url: https://www.contentful.com/developers/docs/webhooks/
+  x-generated-from:
+    - https://www.contentful.com/developers/docs/webhooks/
+    - https://www.contentful.com/developers/docs/webhooks/content-events/
+    - https://www.contentful.com/developers/docs/webhooks/action-events/
+    - https://www.contentful.com/developers/docs/webhooks/headers/
+    - https://www.contentful.com/developers/docs/webhooks/request-verification/
+  x-generated-by: claude-crawl-2026-05-30
+defaultContentType: application/vnd.contentful.management.v1+json
+servers:
+  subscriber:
+    url: '{webhookUrl}'
+    protocol: https
+    description: >-
+      The subscriber-controlled HTTPS endpoint registered in Contentful as
+      the webhook target. Contentful POSTs event payloads to this URL.
+    variables:
+      webhookUrl:
+        default: https://example.com/contentful-webhook
+        description: Fully-qualified HTTPS endpoint that receives webhook deliveries.
+    security:
+      - WebhookSignature: []
+channels:
+  ContentType.create:
+    description: A content type was created.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onContentTypeCreate
+      message:
+        $ref: '#/components/messages/ContentTypeEvent'
+  ContentType.save:
+    description: A content type was saved.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onContentTypeSave
+      message:
+        $ref: '#/components/messages/ContentTypeEvent'
+  ContentType.publish:
+    description: A content type was published.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onContentTypePublish
+      message:
+        $ref: '#/components/messages/ContentTypeEvent'
+  ContentType.unpublish:
+    description: A content type was unpublished.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onContentTypeUnpublish
+      message:
+        $ref: '#/components/messages/ContentTypeEvent'
+  ContentType.delete:
+    description: A content type was deleted.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onContentTypeDelete
+      message:
+        $ref: '#/components/messages/ContentTypeEvent'
+  Entry.create:
+    description: An entry was created.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onEntryCreate
+      message:
+        $ref: '#/components/messages/EntryEvent'
+  Entry.save:
+    description: An entry was saved.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onEntrySave
+      message:
+        $ref: '#/components/messages/EntryEvent'
+  Entry.auto_save:
+    description: An entry was auto-saved.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onEntryAutoSave
+      message:
+        $ref: '#/components/messages/EntryEvent'
+  Entry.archive:
+    description: An entry was archived.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onEntryArchive
+      message:
+        $ref: '#/components/messages/EntryEvent'
+  Entry.unarchive:
+    description: An entry was unarchived.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onEntryUnarchive
+      message:
+        $ref: '#/components/messages/EntryEvent'
+  Entry.publish:
+    description: An entry was published.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onEntryPublish
+      message:
+        $ref: '#/components/messages/EntryEvent'
+  Entry.unpublish:
+    description: An entry was unpublished.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onEntryUnpublish
+      message:
+        $ref: '#/components/messages/EntryEvent'
+  Entry.delete:
+    description: An entry was deleted.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onEntryDelete
+      message:
+        $ref: '#/components/messages/EntryEvent'
+  Asset.create:
+    description: An asset was created.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onAssetCreate
+      message:
+        $ref: '#/components/messages/AssetEvent'
+  Asset.save:
+    description: An asset was saved.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onAssetSave
+      message:
+        $ref: '#/components/messages/AssetEvent'
+  Asset.auto_save:
+    description: An asset was auto-saved.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onAssetAutoSave
+      message:
+        $ref: '#/components/messages/AssetEvent'
+  Asset.archive:
+    description: An asset was archived.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onAssetArchive
+      message:
+        $ref: '#/components/messages/AssetEvent'
+  Asset.unarchive:
+    description: An asset was unarchived.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onAssetUnarchive
+      message:
+        $ref: '#/components/messages/AssetEvent'
+  Asset.publish:
+    description: An asset was published.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onAssetPublish
+      message:
+        $ref: '#/components/messages/AssetEvent'
+  Asset.unpublish:
+    description: An asset was unpublished.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onAssetUnpublish
+      message:
+        $ref: '#/components/messages/AssetEvent'
+  Asset.delete:
+    description: An asset was deleted.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onAssetDelete
+      message:
+        $ref: '#/components/messages/AssetEvent'
+  Task.create:
+    description: A task was created.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onTaskCreate
+      message:
+        $ref: '#/components/messages/TaskEvent'
+  Task.save:
+    description: A task was saved.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onTaskSave
+      message:
+        $ref: '#/components/messages/TaskEvent'
+  Task.delete:
+    description: A task was deleted.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onTaskDelete
+      message:
+        $ref: '#/components/messages/TaskEvent'
+  Comment.create:
+    description: A comment was created.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onCommentCreate
+      message:
+        $ref: '#/components/messages/CommentEvent'
+  Comment.save:
+    description: A comment was saved.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onCommentSave
+      message:
+        $ref: '#/components/messages/CommentEvent'
+  Comment.delete:
+    description: A comment was deleted.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onCommentDelete
+      message:
+        $ref: '#/components/messages/CommentEvent'
+  Release.create:
+    description: A release was created.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onReleaseCreate
+      message:
+        $ref: '#/components/messages/ReleaseEvent'
+  Release.save:
+    description: A release was saved.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onReleaseSave
+      message:
+        $ref: '#/components/messages/ReleaseEvent'
+  Release.archive:
+    description: A release was archived.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onReleaseArchive
+      message:
+        $ref: '#/components/messages/ReleaseEvent'
+  Release.unarchive:
+    description: A release was unarchived.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onReleaseUnarchive
+      message:
+        $ref: '#/components/messages/ReleaseEvent'
+  Release.delete:
+    description: A release was deleted.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onReleaseDelete
+      message:
+        $ref: '#/components/messages/ReleaseEvent'
+  ReleaseAction.create:
+    description: A release action (publish or unpublish) was created.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onReleaseActionCreate
+      message:
+        $ref: '#/components/messages/ReleaseActionEvent'
+  ReleaseAction.execute:
+    description: A release action was executed against the referenced content.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onReleaseActionExecute
+      message:
+        $ref: '#/components/messages/ReleaseActionEvent'
+  BulkAction.create:
+    description: A bulk action containing a collection of entries and assets was created.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onBulkActionCreate
+      message:
+        $ref: '#/components/messages/BulkActionEvent'
+  BulkAction.execute:
+    description: A bulk action was executed against the referenced content.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onBulkActionExecute
+      message:
+        $ref: '#/components/messages/BulkActionEvent'
+  ScheduledAction.create:
+    description: A scheduled action was created.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onScheduledActionCreate
+      message:
+        $ref: '#/components/messages/ScheduledActionEvent'
+  ScheduledAction.save:
+    description: A scheduled action was saved.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onScheduledActionSave
+      message:
+        $ref: '#/components/messages/ScheduledActionEvent'
+  ScheduledAction.execute:
+    description: A scheduled action was executed at its scheduled time.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onScheduledActionExecute
+      message:
+        $ref: '#/components/messages/ScheduledActionEvent'
+  ScheduledAction.delete:
+    description: A scheduled action was deleted (cancelled).
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onScheduledActionDelete
+      message:
+        $ref: '#/components/messages/ScheduledActionEvent'
+  Workflow.create:
+    description: A workflow was created.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onWorkflowCreate
+      message:
+        $ref: '#/components/messages/WorkflowEvent'
+  Workflow.save:
+    description: A workflow was saved.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onWorkflowSave
+      message:
+        $ref: '#/components/messages/WorkflowEvent'
+  Workflow.complete:
+    description: A workflow was completed.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onWorkflowComplete
+      message:
+        $ref: '#/components/messages/WorkflowEvent'
+  TemplateInstallation.complete:
+    description: A template installation was completed.
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onTemplateInstallationComplete
+      message:
+        $ref: '#/components/messages/TemplateInstallationEvent'
+  EntryVersion.save:
+    description: >-
+      An entry version was saved (Timeline event; limited plan availability).
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onEntryVersionSave
+      message:
+        $ref: '#/components/messages/EntryEvent'
+  EntryVersion.auto_save:
+    description: >-
+      An entry version was auto-saved (Timeline event; limited plan
+      availability).
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onEntryVersionAutoSave
+      message:
+        $ref: '#/components/messages/EntryEvent'
+  AssetVersion.save:
+    description: >-
+      An asset version was saved (Timeline event; limited plan availability).
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onAssetVersionSave
+      message:
+        $ref: '#/components/messages/AssetEvent'
+  AssetVersion.auto_save:
+    description: >-
+      An asset version was auto-saved (Timeline event; limited plan
+      availability).
+    bindings:
+      http:
+        type: request
+        method: POST
+    publish:
+      operationId: onAssetVersionAutoSave
+      message:
+        $ref: '#/components/messages/AssetEvent'
+components:
+  securitySchemes:
+    WebhookSignature:
+      type: httpApiKey
+      in: header
+      name: x-contentful-signature
+      description: >-
+        HMAC-SHA256 signature of the canonical request, hex-encoded, signed
+        with the 64-character webhook signing secret configured for the
+        space. The canonical request is constructed by joining the HTTP
+        method, URL-encoded request path, the signed headers
+        (lowercase, semicolon-separated as header:value), and the raw
+        request body with newlines. Subscribers verify by recomputing the
+        HMAC-SHA256 of the canonical request and comparing against the
+        x-contentful-signature header. The x-contentful-signed-headers
+        header lists the headers included in the signature, and the
+        x-contentful-timestamp header carries the signing timestamp for
+        TTL validation. Webhook signing secrets are 64 characters and
+        match the regex /^[0-9a-zA-Z+/=_-]+$/.
+  messages:
+    ContentTypeEvent:
+      name: ContentTypeEvent
+      title: Content Type Event
+      summary: Sent when a content type changes state.
+      contentType: application/vnd.contentful.management.v1+json
+      headers:
+        $ref: '#/components/schemas/CommonHeaders'
+      payload:
+        $ref: '#/components/schemas/Resource'
+    EntryEvent:
+      name: EntryEvent
+      title: Entry Event
+      summary: Sent when an entry changes state.
+      contentType: application/vnd.contentful.management.v1+json
+      headers:
+        $ref: '#/components/schemas/CommonHeaders'
+      payload:
+        $ref: '#/components/schemas/Resource'
+    AssetEvent:
+      name: AssetEvent
+      title: Asset Event
+      summary: Sent when an asset changes state.
+      contentType: application/vnd.contentful.management.v1+json
+      headers:
+        $ref: '#/components/schemas/CommonHeaders'
+      payload:
+        $ref: '#/components/schemas/Resource'
+    TaskEvent:
+      name: TaskEvent
+      title: Task Event
+      summary: Sent when a task changes state.
+      contentType: application/vnd.contentful.management.v1+json
+      headers:
+        $ref: '#/components/schemas/CommonHeaders'
+      payload:
+        $ref: '#/components/schemas/Resource'
+    CommentEvent:
+      name: CommentEvent
+      title: Comment Event
+      summary: Sent when a comment changes state.
+      contentType: application/vnd.contentful.management.v1+json
+      headers:
+        $ref: '#/components/schemas/CommonHeaders'
+      payload:
+        $ref: '#/components/schemas/Resource'
+    ReleaseEvent:
+      name: ReleaseEvent
+      title: Release Event
+      summary: >-
+        Sent when a release entity itself is created, saved, archived,
+        unarchived, or deleted (not when an action is taken on its
+        contents).
+      contentType: application/vnd.contentful.management.v1+json
+      headers:
+        $ref: '#/components/schemas/ReleaseHeaders'
+      payload:
+        $ref: '#/components/schemas/Resource'
+    ReleaseActionEvent:
+      name: ReleaseActionEvent
+      title: Release Action Event
+      summary: >-
+        Sent when a release action (publish or unpublish of release
+        contents) is created or executed.
+      contentType: application/vnd.contentful.management.v1+json
+      headers:
+        $ref: '#/components/schemas/ReleaseHeaders'
+      payload:
+        $ref: '#/components/schemas/Resource'
+    BulkActionEvent:
+      name: BulkActionEvent
+      title: Bulk Action Event
+      summary: >-
+        Sent when a bulk action containing a collection of entries and
+        assets is created or executed.
+      contentType: application/vnd.contentful.management.v1+json
+      headers:
+        $ref: '#/components/schemas/BulkActionHeaders'
+      payload:
+        $ref: '#/components/schemas/Resource'
+    ScheduledActionEvent:
+      name: ScheduledActionEvent
+      title: Scheduled Action Event
+      summary: >-
+        Sent when a scheduled action is created, saved, executed, or
+        deleted.
+      contentType: application/vnd.contentful.management.v1+json
+      headers:
+        $ref: '#/components/schemas/ScheduledActionHeaders'
+      payload:
+        $ref: '#/components/schemas/Resource'
+    WorkflowEvent:
+      name: WorkflowEvent
+      title: Workflow Event
+      summary: Sent when a workflow is created, saved, or completed.
+      contentType: application/vnd.contentful.management.v1+json
+      headers:
+        $ref: '#/components/schemas/CommonHeaders'
+      payload:
+        $ref: '#/components/schemas/Resource'
+    TemplateInstallationEvent:
+      name: TemplateInstallationEvent
+      title: Template Installation Event
+      summary: Sent when a template installation has completed.
+      contentType: application/vnd.contentful.management.v1+json
+      headers:
+        $ref: '#/components/schemas/CommonHeaders'
+      payload:
+        $ref: '#/components/schemas/Resource'
+  schemas:
+    CommonHeaders:
+      type: object
+      description: >-
+        Standard headers Contentful adds to every webhook request.
+        Subscribers may also configure additional custom headers and
+        secret headers during webhook setup.
+      properties:
+        X-Contentful-Topic:
+          type: string
+          description: >-
+            Event topic in the format ContentManagement.{Type}.{Action},
+            for example ContentManagement.Entry.publish.
+          example: ContentManagement.Entry.publish
+        X-Contentful-Webhook-Name:
+          type: string
+          description: >-
+            The webhook's display name, or an encoded form for names with
+            characters above byte 255.
+        Content-Type:
+          type: string
+          description: Always application/vnd.contentful.management.v1+json.
+          example: application/vnd.contentful.management.v1+json
+        x-contentful-signature:
+          type: string
+          description: >-
+            Hex-encoded HMAC-SHA256 signature of the canonical request.
+            Present only when a webhook signing secret is configured for
+            the space.
+        x-contentful-signed-headers:
+          type: string
+          description: >-
+            Comma-separated list of header names that were included in the
+            signature computation. Present only when a webhook signing
+            secret is configured.
+        x-contentful-timestamp:
+          type: string
+          description: >-
+            Signing timestamp used for TTL validation. Present only when a
+            webhook signing secret is configured.
+        X-Contentful-CRN:
+          type: string
+          description: >-
+            Contentful Resource Name; present for app installations and
+            calls.
+    ReleaseHeaders:
+      allOf:
+        - $ref: '#/components/schemas/CommonHeaders'
+        - type: object
+          properties:
+            x-contentful-release-id:
+              type: string
+              description: Identifier of the release the event relates to.
+            x-contentful-release-version:
+              type: string
+              description: Version of the release the event relates to.
+    BulkActionHeaders:
+      allOf:
+        - $ref: '#/components/schemas/CommonHeaders'
+        - type: object
+          properties:
+            x-contentful-bulk-action-id:
+              type: string
+              description: Identifier of the bulk action the event relates to.
+    ScheduledActionHeaders:
+      allOf:
+        - $ref: '#/components/schemas/CommonHeaders'
+        - type: object
+          properties:
+            x-contentful-scheduled-action-id:
+              type: string
+              description: Identifier of the scheduled action the event relates to.
+    Resource:
+      type: object
+      description: >-
+        Contentful Management API resource representation for the entity
+        that triggered the event. Shape follows the
+        application/vnd.contentful.management.v1+json envelope (sys plus
+        entity-specific fields). The exact schema varies by entity type.
+      additionalProperties: true
