@@ -14,11 +14,10 @@ apis:
     type: Documentation
   - url: openapi/contentful-openapi.yml
     type: OpenAPI
-  - type: NaftikoCapability
-    url: capabilities/contentful.yaml
-  description: The Content Delivery API (CDA), available at cdn.contentful.com, is a read-only API for delivering content
-    from Contentful to apps, websites and other media. Content is delivered as JSON data, and images, videos and other media
-    as files.
+  description: >-
+    The Content Delivery API (CDA), available at cdn.contentful.com, is a read-only API for delivering content from
+    Contentful to apps, websites and other media. Content is delivered as JSON data, and images, videos and other
+    media as files.
 - aid: contentful:contentful-content-management-api
   name: Contentful Content Management API
   tags:
@@ -30,8 +29,9 @@ apis:
   properties:
   - url: https://www.contentful.com/developers/docs/references/content-management-api/
     type: Documentation
-  description: Contentful's Content Management API (CMA) helps you manage content in your spaces. To learn more about how
-    to model your content, read our modeling guide.
+  description: >-
+    Contentful's Content Management API (CMA) helps you manage content in your spaces. To learn more about how to
+    model your content, read our modeling guide.
 - aid: contentful:contentful-preview-api
   name: Contentful Preview API
   tags:
@@ -44,9 +44,10 @@ apis:
   properties:
   - url: https://www.contentful.com/developers/docs/references/content-preview-api/
     type: Documentation
-  description: In addition to the Content Delivery API (CDA) for published content, is the Preview API for previewing both
-    published and unpublished content. It maintains the same behaviour and parameters as the CDA, but delivers the latest
-    drafts for entries and assets. The Content Preview API is used to display the latest version of an entry.
+  description: >-
+    In addition to the Content Delivery API (CDA) for published content, is the Preview API for previewing both
+    published and unpublished content. It maintains the same behaviour and parameters as the CDA, but delivers the
+    latest drafts for entries and assets. The Content Preview API is used to display the latest version of an entry.
 - aid: contentful:contentful-images-api
   name: Contentful Images API
   tags:
@@ -72,9 +73,12 @@ apis:
   properties:
   - url: https://www.contentful.com/developers/docs/references/graphql/
     type: Documentation
-  description: The GraphQL Content API provides a GraphQL API interface to the content from Contentful. Each Contentful space
-    comes with a GraphQL schema based on its content model. This GraphQL schema is generated at request time and is always
-    up-to-date with the current status of the space.
+  - url: graphql/contentful-graphql.md
+    type: GraphQL
+  description: >-
+    The GraphQL Content API provides a GraphQL API interface to the content from Contentful. Each Contentful space
+    comes with a GraphQL schema based on its content model. This GraphQL schema is generated at request time and is
+    always up-to-date with the current status of the space.
 - aid: contentful:contentful-user-management-api
   name: Contentful User Management API
   tags:
@@ -87,7 +91,8 @@ apis:
   properties:
   - url: https://www.contentful.com/developers/docs/references/user-management-api/
     type: Documentation
-  description: Contentful's User Management API helps organizations programmatically manage their organizations, organization
+  description: >-
+    Contentful's User Management API helps organizations programmatically manage their organizations, organization
     memberships, teams, space memberships and more.
 - aid: contentful:contentful-scim-api
   name: Contentful SCIM API
@@ -101,7 +106,8 @@ apis:
   properties:
   - url: https://www.contentful.com/developers/docs/references/scim-api/
     type: Documentation
-  description: System for Cross-domain Identity Management, or SCIM, is an API specification created to facilitate the management
+  description: >-
+    System for Cross-domain Identity Management, or SCIM, is an API specification created to facilitate the management
     of people and groups of people in cloud-based applications and services.
 - aid: contentful:contentful-webhooks
   name: Contentful Webhooks
@@ -125,11 +131,12 @@ apis:
     type: Documentation
   - url: openapi/contentful-webhooks-asyncapi.yml
     type: AsyncAPI
-  description: Contentful webhooks are HTTP callbacks that notify subscriber endpoints when content events (ContentType,
-    Entry, Asset, Task, Comment, Release, Workflow, Template Installation) and action events (Release Actions, Bulk Actions,
-    Scheduled Actions) occur in a space. Requests are POSTed as application/vnd.contentful.management.v1+json and, when a
-    64-character signing secret is configured, signed with HMAC-SHA256 via the x-contentful-signature, x-contentful-signed-headers,
-    and x-contentful-timestamp headers.
+  description: >-
+    Contentful webhooks are HTTP callbacks that notify subscriber endpoints when content events (ContentType, Entry,
+    Asset, Task, Comment, Release, Workflow, Template Installation) and action events (Release Actions, Bulk Actions,
+    Scheduled Actions) occur in a space. Requests are POSTed as application/vnd.contentful.management.v1+json and,
+    when a 64-character signing secret is configured, signed with HMAC-SHA256 via the x-contentful-signature,
+    x-contentful-signed-headers, and x-contentful-timestamp headers.
 name: Contentful
 tags:
 - CMS
@@ -182,9 +189,10 @@ common:
   type: AgentSkill
 created: 2023/11/20
 modified: '2026-05-30'
-description: Contentful is a content management platform that allows businesses to create, manage, and deliver digital content
-  across various channels and devices. By using Contentful, companies can streamline their content creation process, collaborate
-  with team members, and ensure a consistent and cohesive brand message.
+description: >-
+  Contentful is a content management platform that allows businesses to create, manage, and deliver digital content
+  across various channels and devices. By using Contentful, companies can streamline their content creation process,
+  collaborate with team members, and ensure a consistent and cohesive brand message.
 integrations:
 - name: Braze Logo
 - name: Essentials Bynder
