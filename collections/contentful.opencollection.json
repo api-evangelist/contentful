@@ -1,0 +1,266 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Contentful Content Delivery API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Get space",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://cdn.contentful.com/spaces/:space_id",
+        "params": [
+          {
+            "name": "space_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get space"
+    },
+    {
+      "info": {
+        "name": "Get content types",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://cdn.contentful.com/spaces/:space_id/environments/:environment_id/content_types",
+        "params": [
+          {
+            "name": "space_id",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "environment_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get content types"
+    },
+    {
+      "info": {
+        "name": "Get content type",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://cdn.contentful.com/spaces/:space_id/environments/:environment_id/content_types/:content_type_id",
+        "params": [
+          {
+            "name": "space_id",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "environment_id",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "content_type_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get content type"
+    },
+    {
+      "info": {
+        "name": "Get entries",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://cdn.contentful.com/spaces/:space_id/environments/:environment_id/entries",
+        "params": [
+          {
+            "name": "space_id",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "environment_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get entries"
+    },
+    {
+      "info": {
+        "name": "Get entry",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://cdn.contentful.com/spaces/:space_id/environments/:environment_id/entries/:entry_id",
+        "params": [
+          {
+            "name": "space_id",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "environment_id",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "entry_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get entry"
+    },
+    {
+      "info": {
+        "name": "Get assets",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://cdn.contentful.com/spaces/:space_id/environments/:environment_id/assets",
+        "params": [
+          {
+            "name": "space_id",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "environment_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get assets"
+    },
+    {
+      "info": {
+        "name": "Get asset",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://cdn.contentful.com/spaces/:space_id/environments/:environment_id/assets/:asset_id",
+        "params": [
+          {
+            "name": "space_id",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "environment_id",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "asset_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get asset"
+    },
+    {
+      "info": {
+        "name": "Get locales",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://cdn.contentful.com/spaces/:space_id/environments/:environment_id/locales",
+        "params": [
+          {
+            "name": "space_id",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "environment_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get locales"
+    },
+    {
+      "info": {
+        "name": "Get tags",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://cdn.contentful.com/spaces/:space_id/environments/:environment_id/tags",
+        "params": [
+          {
+            "name": "space_id",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "environment_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get tags"
+    },
+    {
+      "info": {
+        "name": "Sync content",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://cdn.contentful.com/spaces/:space_id/environments/:environment_id/sync",
+        "params": [
+          {
+            "name": "space_id",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "environment_id",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "initial",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "sync_token",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Sync content"
+    }
+  ],
+  "bundled": true
+}
