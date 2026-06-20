@@ -6,7 +6,7 @@ apis:
   tags:
   - CMS
   - Content
-  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   baseURL: https://cdn.contentful.com
   humanURL: https://www.contentful.com/developers/docs/references/content-delivery-api/
   properties:
@@ -23,7 +23,7 @@ apis:
   tags:
   - CMS
   - Content
-  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   baseURL: https://api.example.com
   humanURL: https://www.contentful.com/developers/docs/references/content-management-api/
   properties:
@@ -38,7 +38,7 @@ apis:
   - CMS
   - Content
   - Preview
-  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   baseURL: https://api.example.com
   humanURL: https://www.contentful.com/developers/docs/references/content-preview-api/
   properties:
@@ -54,7 +54,7 @@ apis:
   - CMS
   - Content
   - Images
-  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   baseURL: https://api.example.com
   humanURL: https://www.contentful.com/developers/docs/references/images-api/
   properties:
@@ -67,7 +67,7 @@ apis:
   - CMS
   - Content
   - GraphQL
-  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   baseURL: https://api.example.com
   humanURL: https://www.contentful.com/developers/docs/references/graphql/
   properties:
@@ -85,7 +85,7 @@ apis:
   - CMS
   - Content
   - Users
-  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   baseURL: https://api.example.com
   humanURL: https://www.contentful.com/developers/docs/references/user-management-api/
   properties:
@@ -100,7 +100,7 @@ apis:
   - CMS
   - Content
   - SCIM
-  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   baseURL: https://api.example.com
   humanURL: https://www.contentful.com/developers/docs/references/scim-api/
   properties:
@@ -116,7 +116,7 @@ apis:
   - Content
   - Webhooks
   - Events
-  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://www.contentful.com/developers/docs/webhooks/
   properties:
   - url: https://www.contentful.com/developers/docs/webhooks/
@@ -141,7 +141,7 @@ name: Contentful
 tags:
 - CMS
 - Content
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 common:
 - type: LinkedIn
   url: https://www.linkedin.com/company/contentful
