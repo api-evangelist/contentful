@@ -156,7 +156,7 @@ common:
 - url: https://www.contentful.com/pricing/
   type: Plans
 - url: https://www.contentful.com/sign-up/#small
-  type: SignUp
+  type: Signup
 - url: https://be.contentful.com/login
   type: Login
 - url: https://www.contentful.com/faq/webhooks/
@@ -186,7 +186,7 @@ common:
   type: MCPServer
 - name: Agent Skills
   url: https://github.com/contentful/skill-kit
-  type: AgentSkill
+  type: AgentSkills
 created: 2023/11/20
 modified: '2026-05-30'
 description: >-
