@@ -1,25 +1,24 @@
 openapi: 3.1.0
 info:
-  title: Contentful Content Delivery API
+  title: Contentful Content Delivery Spaces API
   version: '1.0'
-  description: >-
-    Read-only REST API for delivering published content from Contentful
-    spaces to apps, websites, and other media. Returns entries, assets,
-    content types, locales, tags, and supports incremental sync.
+  description: Read-only REST API for delivering published content from Contentful spaces to apps, websites, and other media. Returns entries, assets, content types, locales, tags, and supports incremental sync.
   x-generated-from: https://www.contentful.com/developers/docs/references/content-delivery-api/
   x-generated-by: claude-crawl-2026-05-08
 servers:
-  - url: https://cdn.contentful.com
-    description: Content Delivery API
+- url: https://cdn.contentful.com
+  description: Content Delivery API
 security:
-  - BearerAuth: []
+- BearerAuth: []
+tags:
+- name: Spaces
 paths:
   /spaces/{space_id}:
     get:
       summary: Get space
       operationId: getSpace
       parameters:
-        - $ref: '#/components/parameters/SpaceId'
+      - $ref: '#/components/parameters/SpaceId'
       responses:
         '200':
           description: Space resource
@@ -27,13 +26,15 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Resource'
+      tags:
+      - Spaces
   /spaces/{space_id}/environments/{environment_id}/content_types:
     get:
       summary: Get content types
       operationId: getContentTypes
       parameters:
-        - $ref: '#/components/parameters/SpaceId'
-        - $ref: '#/components/parameters/EnvironmentId'
+      - $ref: '#/components/parameters/SpaceId'
+      - $ref: '#/components/parameters/EnvironmentId'
       responses:
         '200':
           description: Collection of content types
@@ -41,18 +42,20 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Collection'
+      tags:
+      - Spaces
   /spaces/{space_id}/environments/{environment_id}/content_types/{content_type_id}:
     get:
       summary: Get content type
       operationId: getContentType
       parameters:
-        - $ref: '#/components/parameters/SpaceId'
-        - $ref: '#/components/parameters/EnvironmentId'
-        - name: content_type_id
-          in: path
-          required: true
-          schema:
-            type: string
+      - $ref: '#/components/parameters/SpaceId'
+      - $ref: '#/components/parameters/EnvironmentId'
+      - name: content_type_id
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: Content type resource
@@ -60,13 +63,15 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Resource'
+      tags:
+      - Spaces
   /spaces/{space_id}/environments/{environment_id}/entries:
     get:
       summary: Get entries
       operationId: getEntries
       parameters:
-        - $ref: '#/components/parameters/SpaceId'
-        - $ref: '#/components/parameters/EnvironmentId'
+      - $ref: '#/components/parameters/SpaceId'
+      - $ref: '#/components/parameters/EnvironmentId'
       responses:
         '200':
           description: Collection of entries
@@ -74,18 +79,20 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Collection'
+      tags:
+      - Spaces
   /spaces/{space_id}/environments/{environment_id}/entries/{entry_id}:
     get:
       summary: Get entry
       operationId: getEntry
       parameters:
-        - $ref: '#/components/parameters/SpaceId'
-        - $ref: '#/components/parameters/EnvironmentId'
-        - name: entry_id
-          in: path
-          required: true
-          schema:
-            type: string
+      - $ref: '#/components/parameters/SpaceId'
+      - $ref: '#/components/parameters/EnvironmentId'
+      - name: entry_id
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: Entry resource
@@ -93,13 +100,15 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Resource'
+      tags:
+      - Spaces
   /spaces/{space_id}/environments/{environment_id}/assets:
     get:
       summary: Get assets
       operationId: getAssets
       parameters:
-        - $ref: '#/components/parameters/SpaceId'
-        - $ref: '#/components/parameters/EnvironmentId'
+      - $ref: '#/components/parameters/SpaceId'
+      - $ref: '#/components/parameters/EnvironmentId'
       responses:
         '200':
           description: Collection of assets
@@ -107,18 +116,20 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Collection'
+      tags:
+      - Spaces
   /spaces/{space_id}/environments/{environment_id}/assets/{asset_id}:
     get:
       summary: Get asset
       operationId: getAsset
       parameters:
-        - $ref: '#/components/parameters/SpaceId'
-        - $ref: '#/components/parameters/EnvironmentId'
-        - name: asset_id
-          in: path
-          required: true
-          schema:
-            type: string
+      - $ref: '#/components/parameters/SpaceId'
+      - $ref: '#/components/parameters/EnvironmentId'
+      - name: asset_id
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: Asset resource
@@ -126,13 +137,15 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Resource'
+      tags:
+      - Spaces
   /spaces/{space_id}/environments/{environment_id}/locales:
     get:
       summary: Get locales
       operationId: getLocales
       parameters:
-        - $ref: '#/components/parameters/SpaceId'
-        - $ref: '#/components/parameters/EnvironmentId'
+      - $ref: '#/components/parameters/SpaceId'
+      - $ref: '#/components/parameters/EnvironmentId'
       responses:
         '200':
           description: Collection of locales
@@ -140,13 +153,15 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Collection'
+      tags:
+      - Spaces
   /spaces/{space_id}/environments/{environment_id}/tags:
     get:
       summary: Get tags
       operationId: getTags
       parameters:
-        - $ref: '#/components/parameters/SpaceId'
-        - $ref: '#/components/parameters/EnvironmentId'
+      - $ref: '#/components/parameters/SpaceId'
+      - $ref: '#/components/parameters/EnvironmentId'
       responses:
         '200':
           description: Collection of tags
@@ -154,21 +169,23 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Collection'
+      tags:
+      - Spaces
   /spaces/{space_id}/environments/{environment_id}/sync:
     get:
       summary: Sync content
       operationId: sync
       parameters:
-        - $ref: '#/components/parameters/SpaceId'
-        - $ref: '#/components/parameters/EnvironmentId'
-        - name: initial
-          in: query
-          schema:
-            type: boolean
-        - name: sync_token
-          in: query
-          schema:
-            type: string
+      - $ref: '#/components/parameters/SpaceId'
+      - $ref: '#/components/parameters/EnvironmentId'
+      - name: initial
+        in: query
+        schema:
+          type: boolean
+      - name: sync_token
+        in: query
+        schema:
+          type: string
       responses:
         '200':
           description: Sync result
@@ -176,24 +193,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Collection'
+      tags:
+      - Spaces
 components:
-  securitySchemes:
-    BearerAuth:
-      type: http
-      scheme: bearer
-  parameters:
-    SpaceId:
-      name: space_id
-      in: path
-      required: true
-      schema:
-        type: string
-    EnvironmentId:
-      name: environment_id
-      in: path
-      required: true
-      schema:
-        type: string
   schemas:
     Resource:
       type: object
@@ -214,3 +216,20 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Resource'
+  parameters:
+    SpaceId:
+      name: space_id
+      in: path
+      required: true
+      schema:
+        type: string
+    EnvironmentId:
+      name: environment_id
+      in: path
+      required: true
+      schema:
+        type: string
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
