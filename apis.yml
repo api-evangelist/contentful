@@ -1,23 +1,6 @@
 aid: contentful
 url: https://raw.githubusercontent.com/apis-json/artisanal/main/apis/contentful.yml
 apis:
-- aid: contentful:contentful-content-delivery-api
-  name: Contentful Content Delivery API
-  tags:
-  - CMS
-  - Content
-  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-  baseURL: https://cdn.contentful.com
-  humanURL: https://www.contentful.com/developers/docs/references/content-delivery-api/
-  properties:
-  - url: https://www.contentful.com/developers/docs/references/content-delivery-api/
-    type: Documentation
-  - url: openapi/contentful-openapi.yml
-    type: OpenAPI
-  description: >-
-    The Content Delivery API (CDA), available at cdn.contentful.com, is a read-only API for delivering content from
-    Contentful to apps, websites and other media. Content is delivered as JSON data, and images, videos and other
-    media as files.
 - aid: contentful:contentful-content-management-api
   name: Contentful Content Management API
   tags:
@@ -30,8 +13,8 @@ apis:
   - url: https://www.contentful.com/developers/docs/references/content-management-api/
     type: Documentation
   description: >-
-    Contentful's Content Management API (CMA) helps you manage content in your spaces. To learn more about how to
-    model your content, read our modeling guide.
+    Contentful's Content Management API (CMA) helps you manage content in your spaces. To learn more about
+    how to model your content, read our modeling guide.
 - aid: contentful:contentful-preview-api
   name: Contentful Preview API
   tags:
@@ -45,9 +28,10 @@ apis:
   - url: https://www.contentful.com/developers/docs/references/content-preview-api/
     type: Documentation
   description: >-
-    In addition to the Content Delivery API (CDA) for published content, is the Preview API for previewing both
-    published and unpublished content. It maintains the same behaviour and parameters as the CDA, but delivers the
-    latest drafts for entries and assets. The Content Preview API is used to display the latest version of an entry.
+    In addition to the Content Delivery API (CDA) for published content, is the Preview API for previewing
+    both published and unpublished content. It maintains the same behaviour and parameters as the CDA,
+    but delivers the latest drafts for entries and assets. The Content Preview API is used to display
+    the latest version of an entry.
 - aid: contentful:contentful-images-api
   name: Contentful Images API
   tags:
@@ -60,7 +44,8 @@ apis:
   properties:
   - url: https://www.contentful.com/developers/docs/references/images-api/
     type: Documentation
-  description: The Contentful Images API allows the retrieval and manipulation of image files referenced from assets.
+  description: >-
+    The Contentful Images API allows the retrieval and manipulation of image files referenced from assets.
 - aid: contentful:contentful-graphql-content-api
   name: Contentful GraphQL Content API
   tags:
@@ -76,9 +61,9 @@ apis:
   - url: graphql/contentful-graphql.md
     type: GraphQL
   description: >-
-    The GraphQL Content API provides a GraphQL API interface to the content from Contentful. Each Contentful space
-    comes with a GraphQL schema based on its content model. This GraphQL schema is generated at request time and is
-    always up-to-date with the current status of the space.
+    The GraphQL Content API provides a GraphQL API interface to the content from Contentful. Each Contentful
+    space comes with a GraphQL schema based on its content model. This GraphQL schema is generated at
+    request time and is always up-to-date with the current status of the space.
 - aid: contentful:contentful-user-management-api
   name: Contentful User Management API
   tags:
@@ -92,8 +77,8 @@ apis:
   - url: https://www.contentful.com/developers/docs/references/user-management-api/
     type: Documentation
   description: >-
-    Contentful's User Management API helps organizations programmatically manage their organizations, organization
-    memberships, teams, space memberships and more.
+    Contentful's User Management API helps organizations programmatically manage their organizations,
+    organization memberships, teams, space memberships and more.
 - aid: contentful:contentful-scim-api
   name: Contentful SCIM API
   tags:
@@ -107,8 +92,8 @@ apis:
   - url: https://www.contentful.com/developers/docs/references/scim-api/
     type: Documentation
   description: >-
-    System for Cross-domain Identity Management, or SCIM, is an API specification created to facilitate the management
-    of people and groups of people in cloud-based applications and services.
+    System for Cross-domain Identity Management, or SCIM, is an API specification created to facilitate
+    the management of people and groups of people in cloud-based applications and services.
 - aid: contentful:contentful-webhooks
   name: Contentful Webhooks
   tags:
@@ -132,16 +117,41 @@ apis:
   - url: openapi/contentful-webhooks-asyncapi.yml
     type: AsyncAPI
   description: >-
-    Contentful webhooks are HTTP callbacks that notify subscriber endpoints when content events (ContentType, Entry,
-    Asset, Task, Comment, Release, Workflow, Template Installation) and action events (Release Actions, Bulk Actions,
-    Scheduled Actions) occur in a space. Requests are POSTed as application/vnd.contentful.management.v1+json and,
-    when a 64-character signing secret is configured, signed with HMAC-SHA256 via the x-contentful-signature,
+    Contentful webhooks are HTTP callbacks that notify subscriber endpoints when content events (ContentType,
+    Entry, Asset, Task, Comment, Release, Workflow, Template Installation) and action events (Release
+    Actions, Bulk Actions, Scheduled Actions) occur in a space. Requests are POSTed as application/vnd.contentful.management.v1+json
+    and, when a 64-character signing secret is configured, signed with HMAC-SHA256 via the x-contentful-signature,
     x-contentful-signed-headers, and x-contentful-timestamp headers.
+- aid: contentful:contentful-spaces-api
+  name: Contentful Spaces API
+  description: The Spaces API from Contentful — 10 operation(s) for spaces.
+  humanURL: https://www.contentful.com/developers/docs/references/content-delivery-api/
+  baseURL: https://cdn.contentful.com
+  tags:
+  - Spaces
+  properties:
+  - type: OpenAPI
+    url: openapi/contentful-spaces-api-openapi.yml
+  - type: Documentation
+    url: https://www.contentful.com/developers/docs/references/content-delivery-api/
 name: Contentful
 tags:
 - CMS
 - Content
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/contentful.png
 common:
 - type: AgenticAccess
   url: agentic-access/contentful-agentic-access.yml
