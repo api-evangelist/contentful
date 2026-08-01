@@ -1,0 +1,14 @@
+{
+  "provider": "contentful",
+  "sources": [
+    "contentful-spaces-api-openapi.yml"
+  ],
+  "outputs": [
+    "contentful-spaces-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
