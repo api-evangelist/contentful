@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Contentful Content Delivery Spaces API
   version: '1.0'
@@ -196,6 +196,19 @@ paths:
       tags:
       - Spaces
 components:
+  parameters:
+    EnvironmentId:
+      name: environment_id
+      in: path
+      required: true
+      schema:
+        type: string
+    SpaceId:
+      name: space_id
+      in: path
+      required: true
+      schema:
+        type: string
   schemas:
     Resource:
       type: object
@@ -216,19 +229,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Resource'
-  parameters:
-    SpaceId:
-      name: space_id
-      in: path
-      required: true
-      schema:
-        type: string
-    EnvironmentId:
-      name: environment_id
-      in: path
-      required: true
-      schema:
-        type: string
   securitySchemes:
     BearerAuth:
       type: http

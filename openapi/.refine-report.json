@@ -1,7 +1,7 @@
 {
   "provider": "contentful",
   "sources": [
-    "contentful-spaces-api-openapi.yml"
+    "_ae-authored/contentful-openapi.yml"
   ],
   "outputs": [
     "contentful-spaces-api-openapi.yml"
@@ -9,6 +9,23 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "contentful-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "contentful-openapi.yml: tagged paths GET /spaces/{space_id} -> Spaces",
+    "contentful-openapi.yml: tagged paths GET /spaces/{space_id}/environments/{environment_id}/content_types -> Spaces",
+    "contentful-openapi.yml: tagged paths GET /spaces/{space_id}/environments/{environment_id}/content_types/{content_type_id} -> Spaces",
+    "contentful-openapi.yml: tagged paths GET /spaces/{space_id}/environments/{environment_id}/entries -> Spaces",
+    "contentful-openapi.yml: tagged paths GET /spaces/{space_id}/environments/{environment_id}/entries/{entry_id} -> Spaces",
+    "contentful-openapi.yml: tagged paths GET /spaces/{space_id}/environments/{environment_id}/assets -> Spaces",
+    "contentful-openapi.yml: tagged paths GET /spaces/{space_id}/environments/{environment_id}/assets/{asset_id} -> Spaces",
+    "contentful-openapi.yml: tagged paths GET /spaces/{space_id}/environments/{environment_id}/locales -> Spaces",
+    "contentful-openapi.yml: tagged paths GET /spaces/{space_id}/environments/{environment_id}/tags -> Spaces",
+    "contentful-openapi.yml: tagged paths GET /spaces/{space_id}/environments/{environment_id}/sync -> Spaces",
+    "contentful-openapi.yml: declared missing tag: Spaces",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "contentful-spaces-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
