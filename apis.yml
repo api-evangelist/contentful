@@ -141,9 +141,11 @@ apis:
   humanURL: https://www.contentful.com/developers/docs/references/content-delivery-api/
   baseURL: https://cdn.contentful.com
   tags:
+  - Spaces
   - Space
   tags_raw:
   - Spaces
+  - Space
   properties:
   - type: OpenAPI
     url: openapi/contentful-spaces-api-openapi.yml
@@ -153,6 +155,7 @@ name: Contentful
 tags:
 - CMS
 - Content
+- Content Management
 deliveryModel:
   model: saas
   open_source: false
