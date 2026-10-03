@@ -196,6 +196,19 @@ paths:
       tags:
       - Spaces
 components:
+  parameters:
+    EnvironmentId:
+      name: environment_id
+      in: path
+      required: true
+      schema:
+        type: string
+    SpaceId:
+      name: space_id
+      in: path
+      required: true
+      schema:
+        type: string
   schemas:
     Collection:
       type: object
@@ -216,19 +229,6 @@ components:
     Resource:
       type: object
       additionalProperties: true
-  parameters:
-    SpaceId:
-      name: space_id
-      in: path
-      required: true
-      schema:
-        type: string
-    EnvironmentId:
-      name: environment_id
-      in: path
-      required: true
-      schema:
-        type: string
   securitySchemes:
     BearerAuth:
       type: http
