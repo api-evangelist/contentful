@@ -156,6 +156,7 @@ tags:
 - CMS
 - Content
 - Content Management
+- Headless CMS
 deliveryModel:
   model: saas
   open_source: false
