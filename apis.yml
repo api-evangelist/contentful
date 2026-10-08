@@ -185,6 +185,10 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/contentful.png
 common:
+- type: RateLimits
+  url: rate-limits/contentful-rate-limits.yml
+- type: FinOps
+  url: finops/contentful-finops.yml
 - type: AgenticAccess
   url: agentic-access/contentful-agentic-access.yml
 - type: TrustCenter
