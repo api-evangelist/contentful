@@ -15,3 +15,880 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: contentful-zapier
+  label: Zapier
+  partner: zapier
+  partner_name: Zapier
+  type: marketplace
+  marketplace: zapier-directory
+  channel: ipaas-listing
+  evidence: https://zapier.com/apps/contentful/integrations
+  source: edge
+  relationship: ipaas-bridge
+  contract_reference:
+    register: Zapier app directory (zapier.com/api/v4/apps)
+    spec_file: null
+    role: ipaas-connector:zapier
+    registered_name: Contentful
+    matched_domain: contentful.com
+    matched_by: domain+name-among-holders
+    detected_by: sweep-workflow-automation.py
+    detected: '2026-10-15'
+    signal_note: one edge per (provider, platform); actions, triggers and usage counts are context, never read
+    app_slug: contentful
+    beta: false
+    builder: unknown (not in the directory record)
+  status: pending-generation
+  arazzo: null
+- slug: contentful-n8n
+  label: n8n
+  partner: n8n
+  partner_name: n8n
+  type: marketplace
+  marketplace: n8n-nodes-base
+  channel: open-source-node
+  evidence: https://github.com/n8n-io/n8n/tree/860f1273ebd73fabbd668cbec2c49ed9b48a286d/packages/nodes-base/nodes/Contentful
+  source: edge
+  relationship: ipaas-bridge
+  contract_reference:
+    register: n8n built-in nodes (n8n-io/n8n packages/nodes-base)
+    spec_file: null
+    role: ipaas-connector:n8n-nodes-base
+    registered_name: Contentful
+    matched_domain: contentful.com
+    matched_by: domain+name-among-holders
+    detected_by: sweep-workflow-automation.py
+    detected: '2026-10-15'
+    signal_note: one edge per (provider, platform); actions, triggers and usage counts are context, never read
+    node_path: Contentful
+    trigger: false
+    builder: n8n (built-in node)
+  status: pending-generation
+  arazzo: null
+- slug: contentful-ab-tasty
+  label: AB Tasty
+  partner: ab-tasty
+  partner_name: AB Tasty
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/ab-tasty/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: AB Tasty
+    matched_domain: abtasty.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - AB Tasty
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-amazon-web-services
+  label: Amazon Web Services
+  partner: amazon-web-services
+  partner_name: Amazon Web Services
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/amazon-bedrock-content-generator/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: Amazon Web Services
+    matched_domain: amazon.com
+    matched_by: domain+name-among-holders
+    listings: 1
+    sample_apps:
+    - AI Content Generator powered by Amazon Bedrock
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-amplitude
+  label: Amplitude
+  partner: amplitude
+  partner_name: Amplitude
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/amplitude-experiment/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: Amplitude
+    matched_domain: amplitude.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Amplitude Experiment
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-api-video
+  label: api.video
+  partner: api-video
+  partner_name: api.video
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/api-video/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: api.video
+    matched_domain: api.video
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - api.video
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-brandfolder
+  label: Brandfolder
+  partner: brandfolder
+  partner_name: Brandfolder
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/brandfolder/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: Brandfolder
+    matched_domain: brandfolder.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Brandfolder App
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-bynder
+  label: Bynder
+  partner: bynder
+  partner_name: Bynder
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/bynder-content-workflow/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: Bynder
+    matched_domain: bynder.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Bynder Content Workflow
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-ceros
+  label: Ceros
+  partner: ceros
+  partner_name: Ceros
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/ceros/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: Ceros
+    matched_domain: ceros.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Ceros
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-commerce-layer
+  label: Commerce Layer
+  partner: commerce-layer
+  partner_name: Commerce Layer
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/commercelayer/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: Commerce Layer
+    matched_domain: commercelayer.io
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Commerce Layer App
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-crowdin
+  label: Crowdin
+  partner: crowdin
+  partner_name: Crowdin
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/crowdin-app/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: Crowdin
+    matched_domain: crowdin.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Crowdin
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-eppo
+  label: Eppo
+  partner: eppo
+  partner_name: Eppo
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/eppo/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: Eppo
+    matched_domain: geteppo.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Eppo
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-frontify
+  label: Frontify
+  partner: frontify
+  partner_name: Frontify
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/frontify/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: Frontify
+    matched_domain: frontify.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Frontify
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-growthbook
+  label: GrowthBook
+  partner: growthbook
+  partner_name: GrowthBook
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/growthbook-experiment/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: GrowthBook
+    matched_domain: growthbook.io
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - GrowthBook Experiment
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-imagekit-io
+  label: ImageKit.io
+  partner: imagekit
+  partner_name: ImageKit.io
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/imagekit/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: ImageKit.io
+    matched_domain: imagekit.io
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - ImageKit
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-imgix
+  label: imgix
+  partner: imgix
+  partner_name: imgix
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/imgix/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: imgix
+    matched_domain: imgix.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - imgix App
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-kameleoon
+  label: Kameleoon
+  partner: kameleoon
+  partner_name: Kameleoon
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/kameleoon/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: Kameleoon
+    matched_domain: kameleoon.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Kameleoon App
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-launchdarkly
+  label: LaunchDarkly
+  partner: launchdarkly
+  partner_name: LaunchDarkly
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/launchdarkly/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: LaunchDarkly
+    matched_domain: launchdarkly.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - LaunchDarkly
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-lilt
+  label: LILT
+  partner: lilt
+  partner_name: LILT
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/lilt/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: LILT
+    matched_domain: lilt.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - LILT Connect
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-lokalise
+  label: Lokalise
+  partner: lokalise
+  partner_name: Lokalise
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/lokalise/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: Lokalise
+    matched_domain: lokalise.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Lokalise
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-mux
+  label: Mux
+  partner: mux-com
+  partner_name: Mux
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/mux/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: Mux
+    matched_domain: mux.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Mux
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-optimizely
+  label: Optimizely
+  partner: optimizely
+  partner_name: Optimizely
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/optimizely/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: Optimizely
+    matched_domain: optimizely.com
+    matched_by: domain+name-among-holders
+    listings: 1
+    sample_apps:
+    - Optimizely Feature Experimentation
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-orange-logic
+  label: Orange Logic
+  partner: orangelogic
+  partner_name: Orange Logic
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/orangedam-content-browser/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: Orange Logic
+    matched_domain: orangelogic.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - OrangeDAM Content Browser
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-phrase
+  label: Phrase
+  partner: phrase
+  partner_name: Phrase
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/phrase-tms/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: Phrase
+    matched_domain: phrase.com
+    matched_by: domain
+    listings: 2
+    sample_apps:
+    - Phrase Strings
+    - Phrase TMS
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-saleor
+  label: Saleor
+  partner: saleor
+  partner_name: Saleor
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/saleor-commerce/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: Saleor
+    matched_domain: saleor.io
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Saleor Commerce
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-smartcat
+  label: Smartcat
+  partner: smartcat
+  partner_name: Smartcat
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/smartcat/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: Smartcat
+    matched_domain: smartcat.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Smartcat.ai
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-statsig
+  label: Statsig
+  partner: statsig
+  partner_name: Statsig
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/statsig/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: Statsig
+    matched_domain: statsig.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Statsig
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-swell
+  label: Swell
+  partner: swell-io
+  partner_name: Swell
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/swell/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: Swell
+    matched_domain: swell.is
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Swell
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-transifex
+  label: Transifex
+  partner: transifex
+  partner_name: Transifex
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/transifex/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: Transifex
+    matched_domain: transifex.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Transifex
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-transperfect
+  label: TransPerfect
+  partner: transperfect
+  partner_name: TransPerfect
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/globallink-connect-for-contentful/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: TransPerfect
+    matched_domain: transperfect.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - GlobalLink for Contentful
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-uniform-systems-inc
+  label: Uniform Systems, Inc.
+  partner: uniform
+  partner_name: Uniform Systems, Inc.
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/uniform-optimize-for-contentful/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: Uniform Systems, Inc.
+    matched_domain: uniform.dev
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Uniform Optimize
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-uploadcare
+  label: Uploadcare
+  partner: uploadcare
+  partner_name: Uploadcare
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/uploadcare/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: Uploadcare
+    matched_domain: uploadcare.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Uploadcare
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-vwo-wingify-software-pvt-ltd
+  label: VWO, Wingify Software Pvt. Ltd.
+  partner: vwo
+  partner_name: VWO, Wingify Software Pvt. Ltd.
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/vwo-feature-management-and-experimentation/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: VWO, Wingify Software Pvt. Ltd.
+    matched_domain: vwo.com
+    matched_by: domain
+    listings: 2
+    sample_apps:
+    - VWO
+    - VWO - Feature Management & Experimentation
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-wix
+  label: Wix
+  partner: wix
+  partner_name: Wix
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.contentful.com/marketplace/wix/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: Wix
+    matched_domain: wix.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Wix
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-braze
+  label: Braze
+  partner: braze
+  partner_name: Braze
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://www.contentful.com/marketplace/braze/
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-provider-built-app
+    registered_name: Contentful
+    matched_domain: braze.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Braze
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
