@@ -922,7 +922,7 @@
     - silver
     - unknown
     builder: 'community (Meltano Hub variant maintainers: dmzobel, gthesheep)'
-  status: pending-partner-spec
+  status: not-a-workflow
   arazzo: null
 - slug: contentful-microsoft-teams-own
   label: Microsoft Teams (own)
