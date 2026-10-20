@@ -3,6 +3,7 @@ method: searched
 checked:
 - https://github.com/meltano/hub
 - https://github.com/n8n-io/n8n/tree/860f1273ebd73fabbd668cbec2c49ed9b48a286d/packages/nodes-base/nodes/
+- https://github.com/n8n-io/n8n/tree/f73dc337f8dc61a4fd44aebe41c55faafe4f53a4/packages/nodes-base/nodes/
 - https://marketplace.atlassian.com/
 - https://www.contentful.com/marketplace/apps/
 - https://zapier.com/api/v4/apps/
@@ -16,7 +17,7 @@ marketplace_apps:
   app_count: 145
   adapter: 'sweep-content-design.py:headless render: marketplace/apps index + app pages (Developed by, outbound
     app links)'
-  listed: 33
+  listed: 35
   note: 145 listings read; only domain-linked builders / vendors are written
 edges:
 - partner_name: Atlassian Marketplace
@@ -34,56 +35,42 @@ edges:
   publisher_name: Contentful
   detected_by: sweep-devtools.py
   detected: '2026-10-14'
-- partner_name: Zapier
-  partner: zapier
-  partner_match: aggregator
+- partner_name: Microsoft Teams (own)
+  partner: microsoft-teams
+  partner_match: mirror
+  mirror_match: domain+name-among-holders
   type: marketplace
-  marketplace: zapier-directory
-  channel: ipaas-listing
-  relationship: ipaas-bridge
+  relationship: platform-app
   direction: third-party
-  evidence: https://zapier.com/apps/contentful/integrations
-  category: null
-  contract_reference:
-    register: Zapier app directory (zapier.com/api/v4/apps)
-    spec_file: null
-    role: ipaas-connector:zapier
-    registered_name: Contentful
-    matched_domain: contentful.com
-    matched_by: domain+name-among-holders
-    detected_by: sweep-workflow-automation.py
-    detected: '2026-10-15'
-    signal_note: one edge per (provider, platform); actions, triggers and usage counts are context, never read
-    app_slug: contentful
-    beta: false
-    builder: unknown (not in the directory record)
-  detected_by: sweep-workflow-automation.py
-  first_seen: '2026-10-15'
-- partner_name: n8n
-  partner: n8n
-  partner_match: aggregator
+  channel: partner-built
+  marketplace: own
+  evidence: https://appsource.microsoft.com/en-us/product/office/WA200006781
+  mirror_of: microsoft-teams/integrations/microsoft-teams-integration-edges.yml
+  apps:
+  - Contentful
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Microsoft Teams app
+  publisher_verified:
+  - Microsoft 365 Certified
+- partner_name: Slack (own)
+  partner: slack
+  partner_match: mirror
+  mirror_match: domain+name-among-holders
   type: marketplace
-  marketplace: n8n-nodes-base
-  channel: open-source-node
-  relationship: ipaas-bridge
+  relationship: platform-app
   direction: third-party
-  evidence: https://github.com/n8n-io/n8n/tree/860f1273ebd73fabbd668cbec2c49ed9b48a286d/packages/nodes-base/nodes/Contentful
-  category: null
-  contract_reference:
-    register: n8n built-in nodes (n8n-io/n8n packages/nodes-base)
-    spec_file: null
-    role: ipaas-connector:n8n-nodes-base
-    registered_name: Contentful
-    matched_domain: contentful.com
-    matched_by: domain+name-among-holders
-    detected_by: sweep-workflow-automation.py
-    detected: '2026-10-15'
-    signal_note: one edge per (provider, platform); actions, triggers and usage counts are context, never read
-    node_path: Contentful
-    trigger: false
-    builder: n8n (built-in node)
-  detected_by: sweep-workflow-automation.py
-  first_seen: '2026-10-15'
+  channel: partner-built
+  marketplace: own
+  evidence: https://slack.com/marketplace/A02N736UC9Y-contentful
+  mirror_of: slack/integrations/slack-integration-edges.yml
+  apps:
+  - Contentful
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Slack app
 - partner_name: AB Tasty
   app: AB Tasty
   partner: ab-tasty
@@ -318,6 +305,32 @@ edges:
     detected: '2026-10-15'
   detected_by: sweep-content-design.py
   detected: '2026-10-15'
+- partner_name: Emporix
+  app: Emporix App
+  partner: emporix
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.contentful.com/marketplace/emporix/
+  category: null
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: Emporix
+    matched_domain: emporix.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Emporix App
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-19'
+  detected_by: sweep-content-design.py
+  detected: '2026-10-19'
 - partner_name: Eppo
   app: Eppo
   partner: eppo
@@ -474,6 +487,32 @@ edges:
     detected: '2026-10-15'
   detected_by: sweep-content-design.py
   detected: '2026-10-15'
+- partner_name: Kibo Commerce
+  app: Kibo Commerce App
+  partner: kibo-commerce
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.contentful.com/marketplace/kibo-commerce/
+  category: null
+  contract_reference:
+    register: Contentful Marketplace (contentful.com/marketplace, headless render)
+    spec_file: null
+    role: contentful-app
+    registered_name: Kibo Commerce
+    matched_domain: kibocommerce.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Kibo Commerce App
+    signal_note: one edge per (builder, platform); listings are context, never read
+    detected_by: sweep-content-design.py
+    detected: '2026-10-19'
+  detected_by: sweep-content-design.py
+  detected: '2026-10-19'
 - partner_name: LaunchDarkly
   app: LaunchDarkly
   partner: launchdarkly
@@ -976,41 +1015,55 @@ edges:
     builder: 'community (Meltano Hub variant maintainers: dmzobel, gthesheep)'
   detected_by: sweep-data-integration.py
   first_seen: '2026-10-18'
-- partner_name: Microsoft Teams (own)
-  partner: microsoft-teams
-  partner_match: mirror
-  mirror_match: domain+name-among-holders
+- partner_name: Zapier
+  partner: zapier
+  partner_match: aggregator
   type: marketplace
-  relationship: platform-app
+  marketplace: zapier-directory
+  channel: ipaas-listing
+  relationship: ipaas-bridge
   direction: third-party
-  channel: partner-built
-  marketplace: own
-  evidence: https://appsource.microsoft.com/en-us/product/office/WA200006781
-  mirror_of: microsoft-teams/integrations/microsoft-teams-integration-edges.yml
-  apps:
-  - Contentful
-  listing_count: 1
-  detected: '2026-10-18'
-  detected_by: mirror-platform-listings.py
-  category: Microsoft Teams app
-  publisher_verified:
-  - Microsoft 365 Certified
-- partner_name: Slack (own)
-  partner: slack
-  partner_match: mirror
-  mirror_match: domain+name-among-holders
+  evidence: https://zapier.com/apps/contentful/integrations
+  category: null
+  contract_reference:
+    register: Zapier app directory (zapier.com/api/v4/apps)
+    spec_file: null
+    role: ipaas-connector:zapier
+    registered_name: Contentful
+    matched_domain: contentful.com
+    matched_by: domain+name-among-holders
+    detected_by: sweep-workflow-automation.py
+    detected: '2026-10-15'
+    signal_note: one edge per (provider, platform); actions, triggers and usage counts are context, never read
+    app_slug: contentful
+    beta: false
+    builder: unknown (not in the directory record)
+  detected_by: sweep-workflow-automation.py
+  first_seen: '2026-10-15'
+- partner_name: n8n
+  partner: n8n
+  partner_match: aggregator
   type: marketplace
-  relationship: platform-app
+  marketplace: n8n-nodes-base
+  channel: open-source-node
+  relationship: ipaas-bridge
   direction: third-party
-  channel: partner-built
-  marketplace: own
-  evidence: https://slack.com/marketplace/A02N736UC9Y-contentful
-  mirror_of: slack/integrations/slack-integration-edges.yml
-  apps:
-  - Contentful
-  listing_count: 1
-  detected: '2026-10-18'
-  detected_by: mirror-platform-listings.py
-  category: Slack app
+  evidence: https://github.com/n8n-io/n8n/tree/f73dc337f8dc61a4fd44aebe41c55faafe4f53a4/packages/nodes-base/nodes/Contentful
+  category: null
+  contract_reference:
+    register: n8n built-in nodes (n8n-io/n8n packages/nodes-base)
+    spec_file: null
+    role: ipaas-connector:n8n-nodes-base
+    registered_name: Contentful
+    matched_domain: contentful.com
+    matched_by: domain+name-among-holders
+    detected_by: sweep-workflow-automation.py
+    detected: '2026-10-15'
+    signal_note: one edge per (provider, platform); actions, triggers and usage counts are context, never read
+    node_path: Contentful
+    trigger: false
+    builder: n8n (built-in node)
+  detected_by: sweep-workflow-automation.py
+  first_seen: '2026-10-15'
 source:
 - https://marketplace.atlassian.com/
