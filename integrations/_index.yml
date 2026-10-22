@@ -1048,6 +1048,31 @@
       lapsed: false
   status: not-a-workflow
   arazzo: null
+- slug: contentful-graphql-kit-public-graphql-apis
+  label: graphql-kit public GraphQL APIs
+  partner_name: graphql-kit public GraphQL APIs
+  category: public GraphQL API
+  type: register
+  channel: standard-directory
+  evidence: https://github.com/graphql-kit/graphql-apis
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: graphql-kit public GraphQL APIs, Official APIs (github.com/graphql-kit/graphql-apis README)
+    standard: GraphQL
+    spec_file: null
+    role: public-graphql-api
+    registered_name: Contentful
+    register_id: https://github.com/graphql-kit/graphql-apis#official-apis
+    matched_domain: contentful.com
+    matched_by: domain+name-among-holders
+    graphql_endpoints:
+    - https://graphql.contentful.com/content/v1/spaces/f8bqpb154z8p/explore
+    signal_note: 'participation only: a listed public GraphQL API (endpoint named by the list, not guessed)'
+    detected_by: sweep-graphql-ecosystem.py
+    detected: '2026-10-21'
+  status: not-a-workflow
+  arazzo: null
 - slug: contentful-microsoft-teams-own
   label: Microsoft Teams (own)
   partner: microsoft-teams
@@ -1100,28 +1125,29 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: contentful-graphql-kit-public-graphql-apis
-  label: graphql-kit public GraphQL APIs
-  partner_name: graphql-kit public GraphQL APIs
-  category: public GraphQL API
-  type: register
-  channel: standard-directory
-  evidence: https://github.com/graphql-kit/graphql-apis
+- slug: contentful-netlify-own
+  label: Netlify (own)
+  partner: netlify
+  partner_name: Netlify (own)
+  category: CMS
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.netlify.com/integrations/contentful/
   source: edge
-  relationship: standard-participant
-  contract_reference:
-    register: graphql-kit public GraphQL APIs, Official APIs (github.com/graphql-kit/graphql-apis README)
-    standard: GraphQL
-    spec_file: null
-    role: public-graphql-api
-    registered_name: Contentful
-    register_id: https://github.com/graphql-kit/graphql-apis#official-apis
-    matched_domain: contentful.com
-    matched_by: domain+name-among-holders
-    graphql_endpoints:
-    - https://graphql.contentful.com/content/v1/spaces/f8bqpb154z8p/explore
-    signal_note: 'participation only: a listed public GraphQL API (endpoint named by the list, not guessed)'
-    detected_by: sweep-graphql-ecosystem.py
-    detected: '2026-10-21'
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: contentful-vercel-own
+  label: Vercel (own)
+  partner: vercel
+  partner_name: Vercel (own)
+  category: CMS
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://vercel.com/marketplace/contentful
+  source: edge
+  relationship: platform-app
   status: not-a-workflow
   arazzo: null

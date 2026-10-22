@@ -29,6 +29,8 @@ checked:
 - https://graphql.landscape2.io/data/full.json
 - https://graphql.org/community/tools-and-libraries/
 - https://graphql.org/foundation/members/
+- netlify/integrations/netlify-integration-edges.yml
+- vercel/integrations/vercel-integration-edges.yml
 marketplace_apps:
 - marketplace: own
   channel: partner-built
@@ -1144,6 +1146,31 @@ edges:
       lapsed: false
   detected_by: sweep-mach-headless-commerce.py
   first_seen: '2026-10-20'
+- partner_name: graphql-kit public GraphQL APIs
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://github.com/graphql-kit/graphql-apis
+  category: public GraphQL API
+  contract_reference:
+    register: graphql-kit public GraphQL APIs, Official APIs (github.com/graphql-kit/graphql-apis README)
+    standard: GraphQL
+    spec_file: null
+    role: public-graphql-api
+    registered_name: Contentful
+    register_id: https://github.com/graphql-kit/graphql-apis#official-apis
+    matched_domain: contentful.com
+    matched_by: domain+name-among-holders
+    graphql_endpoints:
+    - https://graphql.contentful.com/content/v1/spaces/f8bqpb154z8p/explore
+    signal_note: 'participation only: a listed public GraphQL API (endpoint named by the list, not guessed)'
+    detected_by: sweep-graphql-ecosystem.py
+    detected: '2026-10-21'
+  detected_by: sweep-graphql-ecosystem.py
+  first_seen: '2026-10-21'
 - partner_name: Microsoft Teams (own)
   partner: microsoft-teams
   partner_match: mirror
@@ -1214,30 +1241,44 @@ edges:
   detected: '2026-10-20'
   detected_by: mirror-platform-listings.py
   category: eCommerce, marketing, websites
-- partner_name: graphql-kit public GraphQL APIs
-  partner: null
-  partner_match: register
-  type: register
-  channel: standard-directory
-  relationship: standard-participant
-  direction: partner-built
-  evidence: https://github.com/graphql-kit/graphql-apis
-  category: public GraphQL API
-  contract_reference:
-    register: graphql-kit public GraphQL APIs, Official APIs (github.com/graphql-kit/graphql-apis README)
-    standard: GraphQL
-    spec_file: null
-    role: public-graphql-api
-    registered_name: Contentful
-    register_id: https://github.com/graphql-kit/graphql-apis#official-apis
-    matched_domain: contentful.com
-    matched_by: domain+name-among-holders
-    graphql_endpoints:
-    - https://graphql.contentful.com/content/v1/spaces/f8bqpb154z8p/explore
-    signal_note: 'participation only: a listed public GraphQL API (endpoint named by the list, not guessed)'
-    detected_by: sweep-graphql-ecosystem.py
-    detected: '2026-10-21'
-  detected_by: sweep-graphql-ecosystem.py
-  first_seen: '2026-10-21'
+- partner_name: Netlify (own)
+  partner: netlify
+  partner_match: mirror
+  mirror_match: domain+name-among-holders
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.netlify.com/integrations/contentful/
+  mirror_of: netlify/integrations/netlify-integration-edges.yml
+  apps:
+  - Contentful
+  - Contentful Templates
+  - Netlify App for Contentful
+  - Contentful Integration
+  listing_count: 1
+  detected: '2026-10-22'
+  detected_by: mirror-platform-listings.py
+  category: CMS
+  partner_tier: listing
+- partner_name: Vercel (own)
+  partner: vercel
+  partner_match: mirror
+  mirror_match: domain+name-among-holders
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://vercel.com/marketplace/contentful
+  mirror_of: vercel/integrations/vercel-integration-edges.yml
+  apps:
+  - Contentful
+  listing_count: 1
+  detected: '2026-10-22'
+  detected_by: mirror-platform-listings.py
+  category: CMS
+  partner_tier: third-party
 source:
 - https://marketplace.atlassian.com/
