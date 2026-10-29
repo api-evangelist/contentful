@@ -1,4 +1,4 @@
-# Contentful (contentful)
+# Contentful
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,207 +66,155 @@
 
 Contentful is a content management platform that allows businesses to create, manage, and deliver digital content across various channels and devices. By using Contentful, companies can streamline their content creation process, collaborate with team members, and ensure a consistent and cohesive brand message.
 
-**APIs.json:** [https://raw.githubusercontent.com/apis-json/artisanal/main/apis/contentful.yml](https://raw.githubusercontent.com/apis-json/artisanal/main/apis/contentful.yml)
+**Areas:** CMS · Content · Content Management · Headless CMS
 
-## Scope
+## Contentful on APIs.io
 
-- **Type:** Index
-- **Position:** Consuming
-- **Access:** 3rd-Party
+Everything profiled for Contentful is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/contentful/](https://apis.io/providers/contentful/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (8)
 
-- CMS
-- Content
+- [Contentful Content Management API](https://apis.io/apis/contentful/contentful-content-management-api/) — Contentful's Content Management API (CMA) helps you manage content in your spaces. To learn more about how to model your content, read our modeling guide.
+- [Contentful Preview API](https://apis.io/apis/contentful/contentful-preview-api/) — In addition to the Content Delivery API (CDA) for published content, is the Preview API for previewing both published and unpublished content. It maintains…
+- [Contentful Images API](https://apis.io/apis/contentful/contentful-images-api/) — The Contentful Images API allows the retrieval and manipulation of image files referenced from assets.
+- [Contentful GraphQL Content API](https://apis.io/apis/contentful/contentful-graphql-content-api/) — The GraphQL Content API provides a GraphQL API interface to the content from Contentful. Each Contentful space comes with a GraphQL schema based on its…
+- [Contentful User Management API](https://apis.io/apis/contentful/contentful-user-management-api/) — Contentful's User Management API helps organizations programmatically manage their organizations, organization memberships, teams, space memberships and more.
+- [Contentful SCIM API](https://apis.io/apis/contentful/contentful-scim-api/) — System for Cross-domain Identity Management, or SCIM, is an API specification created to facilitate the management of people and groups of people in…
+- [Contentful Webhooks](https://apis.io/apis/contentful/contentful-webhooks/) — Contentful webhooks are HTTP callbacks that notify subscriber endpoints when content events (ContentType, Entry, Asset, Task, Comment, Release, Workflow,…
+- [Contentful Spaces API](https://apis.io/apis/contentful/contentful-spaces-api/) — The Spaces API from Contentful — 10 operation(s) for spaces.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2023/11/20
-- **Modified:** 2026-05-30
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### GraphQL (1)
 
-### Contentful Content Delivery API
+GraphQL schemas.
 
-The Content Delivery API (CDA), available at cdn.contentful.com, is a read-only API for delivering content from Contentful to apps, websites and other media. Content is delivered as JSON data, and images, videos and other media as files.
+- [Contentful GraphQL API](https://apis.io/graphqls/contentful/contentful-graphql/)
 
-- **Human URL:** [https://www.contentful.com/developers/docs/references/content-delivery-api/](https://www.contentful.com/developers/docs/references/content-delivery-api/)
-- **Base URL:** `https://cdn.contentful.com`
+#### MCP servers (2)
 
-#### Tags
+Model Context Protocol servers that expose the API to agents.
 
-- CMS
-- Content
+- [contentful](https://apis.io/servers/contentful/contentful/)
+- [MCP Server](https://apis.io/servers/contentful/mcp-server/)
 
-#### Properties
+#### Agent skills (5)
 
-- [Documentation](https://www.contentful.com/developers/docs/references/content-delivery-api/)
-- [OpenAPI](openapi/contentful-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/contentful.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/contentful.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Agent skills built on the API.
 
-### Contentful Content Management API
+- [contentful-help](https://apis.io/agent-skills/contentful/contentful-help/)
+- [game-jam](https://apis.io/agent-skills/contentful/game-jam/)
+- [get-to-know-you](https://apis.io/agent-skills/contentful/get-to-know-you/)
+- [primitives-showcase](https://apis.io/agent-skills/contentful/primitives-showcase/)
+- [ts-patterns](https://apis.io/agent-skills/contentful/ts-patterns/)
 
-Contentful's Content Management API (CMA) helps you manage content in your spaces. To learn more about how to model your content, read our modeling guide.
+#### Agentic access (1)
 
-- **Human URL:** [https://www.contentful.com/developers/docs/references/content-management-api/](https://www.contentful.com/developers/docs/references/content-management-api/)
-- **Base URL:** `https://api.example.com`
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags
+- [Contentful Agentic Access](https://apis.io/agentic-access/contentful/contentful-agentic-access/)
 
-- CMS
-- Content
+#### Collections (3)
 
-#### Properties
+Postman and Open Collection request collections.
 
-- [Documentation](https://www.contentful.com/developers/docs/references/content-management-api/)
-- [Postman Collection](collections/contentful.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/contentful.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Contentful Content Delivery API](https://apis.io/collections/contentful/open-contentful/)
+- [Contentful Content Delivery Spaces API](https://apis.io/collections/contentful/open-contentful-spaces-api/)
+- [Contentful Webhooks](https://apis.io/collections/contentful/open-contentful-webhooks-asyncapi/)
 
-### Contentful Preview API
+#### Security (4)
 
-In addition to the Content Delivery API (CDA) for published content, is the Preview API for previewing both published and unpublished content. It maintains the same behaviour and parameters as the CDA, but delivers the latest drafts for entries and assets. The Content Preview API is used to display the latest version of an entry.
+Authentication, trust centre, and vulnerability disclosure.
 
-- **Human URL:** [https://www.contentful.com/developers/docs/references/content-preview-api/](https://www.contentful.com/developers/docs/references/content-preview-api/)
-- **Base URL:** `https://api.example.com`
+- [Contentful Authentication](https://apis.io/security/contentful/contentful-authentication/)
+- [Contentful Domain Security](https://apis.io/security/contentful/contentful-domain-security/)
+- [Contentful Trust Center](https://apis.io/security/contentful/contentful-trust-center/)
+- [Contentful Vulnerability Disclosure](https://apis.io/security/contentful/contentful-vulnerability-disclosure/)
 
-#### Tags
+#### Plans and pricing (1)
 
-- CMS
-- Content
-- Preview
+Published plans, tiers and prices.
 
-#### Properties
+- [Contentful Plans Pricing](https://apis.io/plans/contentful/contentful-plans-pricing/)
 
-- [Documentation](https://www.contentful.com/developers/docs/references/content-preview-api/)
-- [Postman Collection](collections/contentful.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/contentful.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### Rate limits (1)
 
-### Contentful Images API
+Published request limits.
 
-The Contentful Images API allows the retrieval and manipulation of image files referenced from assets.
+- [Contentful Rate Limits](https://apis.io/rate-limits/contentful/contentful-rate-limits/)
 
-- **Human URL:** [https://www.contentful.com/developers/docs/references/images-api/](https://www.contentful.com/developers/docs/references/images-api/)
-- **Base URL:** `https://api.example.com`
+#### FinOps (1)
 
-#### Tags
+What the API costs to run, by operation.
 
-- CMS
-- Content
-- Images
+- [Contentful Finops](https://apis.io/finops/contentful/contentful-finops/)
 
-#### Properties
+## Where to find this API
 
-- [Documentation](https://www.contentful.com/developers/docs/references/images-api/)
-- [Postman Collection](collections/contentful.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/contentful.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-### Contentful GraphQL Content API
-
-The GraphQL Content API provides a GraphQL API interface to the content from Contentful. Each Contentful space comes with a GraphQL schema based on its content model. This GraphQL schema is generated at request time and is always up-to-date with the current status of the space.
-
-- **Human URL:** [https://www.contentful.com/developers/docs/references/graphql/](https://www.contentful.com/developers/docs/references/graphql/)
-- **Base URL:** `https://api.example.com`
-
-#### Tags
-
-- CMS
-- Content
-- GraphQL
-
-#### Properties
-
-- [Documentation](https://www.contentful.com/developers/docs/references/graphql/)
-- [Postman Collection](collections/contentful.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/contentful.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Contentful User Management API
-
-Contentful's User Management API helps organizations programmatically manage their organizations, organization memberships, teams, space memberships and more.
-
-- **Human URL:** [https://www.contentful.com/developers/docs/references/user-management-api/](https://www.contentful.com/developers/docs/references/user-management-api/)
-- **Base URL:** `https://api.example.com`
-
-#### Tags
-
-- CMS
-- Content
-- Users
-
-#### Properties
-
-- [Documentation](https://www.contentful.com/developers/docs/references/user-management-api/)
-- [Postman Collection](collections/contentful.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/contentful.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Contentful SCIM API
-
-System for Cross-domain Identity Management, or SCIM, is an API specification created to facilitate the management of people and groups of people in cloud-based applications and services.
-
-- **Human URL:** [https://www.contentful.com/developers/docs/references/scim-api/](https://www.contentful.com/developers/docs/references/scim-api/)
-- **Base URL:** `https://api.example.com`
-
-#### Tags
-
-- CMS
-- Content
-- SCIM
-
-#### Properties
-
-- [Documentation](https://www.contentful.com/developers/docs/references/scim-api/)
-- [Postman Collection](collections/contentful.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/contentful.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Contentful Webhooks
-
-Contentful webhooks are HTTP callbacks that notify subscriber endpoints when content events (ContentType, Entry, Asset, Task, Comment, Release, Workflow, Template Installation) and action events (Release Actions, Bulk Actions, Scheduled Actions) occur in a space. Requests are POSTed as application/vnd.contentful.management.v1+json and, when a 64-character signing secret is configured, signed with HMAC-SHA256 via the x-contentful-signature, x-contentful-signed-headers, and x-contentful-timestamp headers.
-
-- **Human URL:** [https://www.contentful.com/developers/docs/webhooks/](https://www.contentful.com/developers/docs/webhooks/)
-
-#### Tags
-
-- CMS
-- Content
-- Webhooks
-- Events
-
-#### Properties
-
-- [Documentation](https://www.contentful.com/developers/docs/webhooks/)
-- [Documentation](https://www.contentful.com/developers/docs/webhooks/content-events/)
-- [Documentation](https://www.contentful.com/developers/docs/webhooks/action-events/)
-- [Documentation](https://www.contentful.com/developers/docs/webhooks/headers/)
-- [Documentation](https://www.contentful.com/developers/docs/webhooks/request-verification/)
-- [AsyncAPI](openapi/contentful-webhooks-asyncapi.yml) — [AsyncAPI Specification](https://www.asyncapi.com/docs/reference/specification/latest)
-- [Postman Collection](collections/contentful.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/contentful.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/contentful)
-- [Portal](https://www.contentful.com/developers/)
+- [Website](https://www.contentful.com/)
 - [Documentation](https://www.contentful.com/developers/docs/)
+- [Support](https://www.contentful.com/support/)
 - [Changelog](https://www.contentful.com/developers/changelog/)
 - [Blog](https://www.contentful.com/blog/category/guides/)
-- [Plans](https://www.contentful.com/pricing/)
-- [Sign Up](https://www.contentful.com/sign-up/#small)
-- [Login](https://be.contentful.com/login)
-- [Webhooks](https://www.contentful.com/faq/webhooks/)
-- [Changelog](https://www.contentful.com/developers/changelog/)
-- [Code of  Conduct](https://www.contentful.com/developers/code-of-conduct/)
-- [Support](https://www.contentful.com/support/)
-- [Stack Overflow](http://stackoverflow.com/questions/tagged/contentful?sort=newest)
 - [Security](https://www.contentful.com/security/)
-- [Privacy Policy](https://www.contentful.com/legal/privacy-at-contentful/privacy-notice/)
-- [Website](https://www.contentful.com/)
-- [GitHub Organization](https://github.com/contentful)
-- [Authentication](https://www.contentful.com/developers/docs/references/authentication/)
-- [Integrations](https://www.contentful.com/marketplace/)
-- [M C P Server](https://github.com/contentful/contentful-mcp-server)
-- [Agent Skill](https://github.com/contentful/skill-kit)
+- [Privacy policy](https://www.contentful.com/legal/privacy-at-contentful/privacy-notice/)
+- [GitHub](https://github.com/contentful)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 42.6** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 56.7 |
+| Contract quality | 52.9 |
+| Contract governance | 0.0 |
+| Operational transparency | 47.4 |
+| Developer ergonomics | 39.8 |
+| Access clarity | 39.5 |
+
+**Agent readiness 56.5** — agent-ready (gated down from agent-native)
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | verified |
+| Auth Clarity | served (partial credit) |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | unknown |
+| Agent Skills | unknown |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | — |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 26.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/contentful/](https://apis.io/providers/contentful/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Contentful: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/contentful/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
